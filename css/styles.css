@@ -1,0 +1,318 @@
+/* Estilos gerais */
+
+body {
+    font-family: 'Roboto', 'sans-serif';
+}
+
+.row {
+    margin: 0;
+}
+
+.container {
+    padding: 30px 0;
+}
+
+.p, li {
+    color: #444;
+    font-size: 14px;
+}
+
+/* Barra de navegação */
+
+.header, .navbar {
+    background-color: #595e61;
+}
+
+.navbar-toggler-icon {
+
+    background-color: aqua !important;
+}
+
+
+#nav_container {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+#logo {
+    width: 75px;
+}
+
+.navbar-brand {
+    padding: 0;
+    color: #fff;
+}
+
+#acionador span {
+    color: aqua;
+}
+
+.navbar-brand:hover {
+    color: #fff;
+}
+
+.nav-link {
+    color: #fff;
+}
+
+.nav-link:hover {
+    color: #65DAF9;
+    
+}
+
+#home-menu {
+    transform: 1.5%;
+    color: rgb(247, 44, 44);
+}
+
+.navbar-expand-lg, .navbar-nav, .nav-link {
+    padding: 1rem .8rem;
+}
+
+
+/* Carrousel */
+
+#MainSlide, .carousel-inner, .carousel-item {
+    height: 100vh;
+}
+
+#MainSlide, .carousel-caption {
+    top: 50%;
+}
+
+#MainSlide, .carousel-caption h2 {
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+#MainSlide, .carousel-caption p {
+    font-size: 22px;
+    font-weight: 300;
+    margin-bottom: 50px;
+    
+}
+
+#main-btn {
+    color: brown;
+    text-transform: uppercase;
+    width: 200px;
+    height: 60px;
+    padding: 10px 20px;
+    border-radius: 30px;
+    border: 3px solid transparent;
+    transition: .5s;
+}
+
+#main-btn:hover {
+    text-decoration: none;
+    color: #fff;
+    background-color: transparent;
+    border-color: brown;
+}
+
+.carousel-indicators .active {
+    background-color: brown;
+}
+
+/* Sobre a empresa */
+
+#about-area {
+    background-color: #f9f9f9;
+}
+
+.main-title {
+    color: #444;
+    margin: 0 0 65px 0;
+    font-size: 40px;
+    text-align: center;
+}
+
+.main-title::after {
+    content: "";
+    border-top: 2px solid #333;
+    width: 15%;
+    position: absolute;
+    top: 60px;
+    left: 42.5%;
+}
+
+.about-title {
+    font-size: 17px;
+    color: #444;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* .outros-diferenciais::before {
+    font-size: 37px;
+    color: violet;
+} */
+
+@media screen and (max-width: 760px){
+    #about-area {
+        img{
+            width: 250px;
+    };
+    
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #container-area {
+      img {
+        width: 250px;
+      };
+    }
+  }
+
+#about-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+#about-list li {
+    line-height: 30px;
+}
+
+#about-list i {
+    color: rgb(78, 123, 157);
+    margin-right: 15px;
+}
+
+/* Seção especialidades */
+
+.service-box {
+    text-align: center;
+    margin-bottom: 50px;
+
+}
+
+.service-box i, .service-box h4 {
+    transition: .5s;
+}
+
+.service-box i {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #444;
+}
+
+.service-box h4 {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.service-box:hover > i, .service-box:hover h4 {
+    color: #65DAF9;
+}
+
+/* Seção Obras */
+
+.projetos {
+    padding: 30px;
+}
+
+.projetos-box {
+    text-align: center;
+    margin-bottom: 50px;
+
+}
+
+.projetos-box i, .service-box h4 {
+    transition: .5s;
+}
+
+.projetos-box i {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #444;
+}
+
+.projetos-box h4 {
+    font-size: 24px;
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+.projetos-box p {
+    color: #fff;
+}
+
+.projetos-box:hover > i, .projetos-box:hover h4 {
+    color: #65DAF9;
+}
+
+.obra {
+    padding: 15px;
+}
+
+
+/* Seção team */
+
+.card-body {
+    text-align: center;
+}
+
+/* Página home */
+
+.container-carousel {
+    height: 80vh;
+}
+
+
+/* Seção 2 */
+
+.div-localizacao {
+    margin-top: 20px;
+    padding: 0px;
+    width: 50%px;
+    height: 600px;
+}
+
+.titulo-localizacao {
+    color: #000;
+    text-align: center;
+}
+
+.frame-localizacao {
+    align-items: center;
+}
+
+.paragrafo-localizacao {
+    color: #000;
+}
+
+/* Footer */
+
+footer{
+    color:#1c8ce1 !important;
+ }
+
+ footer li{
+    margin-top: 20px ;
+    margin-bottom: 20px ;
+    color: #fff;
+}
+
+footer a{
+    text-decoration: none;
+}
+
+footer li:hover {
+    color: #65DAF9;
+}
+  
+ 
+.Careers{ 
+    cursor: pointer;
+    color: #1E88E5;
+}
+
+.row-1{
+    background-color:#1E242A !important;
+}
+
+.row-2{
+    
+    background-color: #28323C !important;
+}
