@@ -20,7 +20,7 @@ body {
 /* Barra de navegação */
 
 .header, .navbar {
-    background-color: #595e61;
+    background-color: #505253;
 }
 
 .navbar-toggler-icon {
@@ -44,11 +44,11 @@ body {
 }
 
 #acionador span {
-    color: aqua;
+    color: #5eb299;
 }
 
 .navbar-brand:hover {
-    color: #fff;
+    color: #5eb299;
 }
 
 .nav-link {
@@ -56,7 +56,7 @@ body {
 }
 
 .nav-link:hover {
-    color: #65DAF9;
+    color: #5eb299;
     
 }
 
@@ -72,9 +72,9 @@ body {
 
 /* Carrousel */
 
-#MainSlide, .carousel-inner, .carousel-item {
-    height: 100vh;
-}
+/* #MainSlide, .carousel-inner, .carousel-item {
+    width: 400vh;
+} */
 
 #MainSlide, .carousel-caption {
     top: 50%;
@@ -203,7 +203,7 @@ body {
 }
 
 .service-box:hover > i, .service-box:hover h4 {
-    color: #65DAF9;
+    color: #5eb299;
 }
 
 /* Seção Obras */
@@ -239,7 +239,7 @@ body {
 }
 
 .projetos-box:hover > i, .projetos-box:hover h4 {
-    color: #65DAF9;
+    color: #5eb299;
 }
 
 .obra {
@@ -285,7 +285,7 @@ body {
 /* Footer */
 
 footer{
-    color:#1c8ce1 !important;
+    color:#5eb299 !important;
  }
 
  footer li{
@@ -299,20 +299,20 @@ footer a{
 }
 
 footer li:hover {
-    color: #65DAF9;
+    color: #5eb299;
 }
   
  
 .Careers{ 
     cursor: pointer;
-    color: #1E88E5;
+    color: #5eb299;
 }
 
 .row-1{
-    background-color:#1E242A !important;
+    background-color:#353637 !important;
 }
 
 .row-2{
     
-    background-color: #28323C !important;
+    background-color: #353637 !important;
 }
