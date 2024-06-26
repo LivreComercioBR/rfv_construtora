@@ -20,12 +20,11 @@ body {
 /* Barra de navegação */
 
 .header, .navbar {
-    background-color: #505253;
+    background-color: #545454;
 }
 
 .navbar-toggler-icon {
-
-    background-color: aqua !important;
+    background-color: #5eb299 !important;
 }
 
 
@@ -43,9 +42,9 @@ body {
     color: #fff;
 }
 
-#acionador span {
+/* #acionador span {
     color: #5eb299;
-}
+} */
 
 .navbar-brand:hover {
     color: #5eb299;
@@ -302,6 +301,9 @@ footer li:hover {
     color: #5eb299;
 }
   
+.text-light {
+    color: #5eb299;
+}
  
 .Careers{ 
     cursor: pointer;
@@ -309,10 +311,10 @@ footer li:hover {
 }
 
 .row-1{
-    background-color:#353637 !important;
+    background-color:#545454 !important;
 }
 
 .row-2{
     
-    background-color: #353637 !important;
+    background-color: #545454 !important;
 }
