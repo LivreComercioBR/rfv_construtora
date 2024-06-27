@@ -245,6 +245,9 @@ body {
     padding: 15px;
 }
 
+/* Seção Clientes */
+
+
 
 /* Seção team */
 
@@ -304,9 +307,21 @@ footer li:hover {
 .text-light {
     color: #5eb299;
 }
+
+#links-rodape {
+    color: #fff;
+}
+
+#logo-rodape {
+    width: 50px;
+}
  
 .Careers{ 
     cursor: pointer;
+    color: #5eb299;
+}
+
+.whatsapp i {
     color: #5eb299;
 }
 

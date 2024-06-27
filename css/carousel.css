@@ -1,5 +1,5 @@
-$itemGrow: 1.2;
-$duration: 250ms;
+#itemGrow: 1.2;
+#duration: 250ms;
 
 html {
   scroll-behavior: smooth;
@@ -28,29 +28,39 @@ h1 {
     display: grid;
     grid-template-columns: repeat(5, auto);
     margin: 20px 0;
+    justify-content: center;
+    gap: 20px;
     
     .item {
       padding: 0 2px;
-      transition: $duration all;
-      
-      &:hover { 
-        margin: 0 40px;
-        transform: scale(1.2);
-      }
+      transition: .5s;
+            
+      /* &:hover { 
+        margin: 0 10%;
+        
+      } */
       
     }
+
+    .item img {
+      width: 400px;
+      height: 400px;
+    }
     
-    a {
-      position: absolute;
+    a.arrow__btn {
+      position: relative;
+      /* position: 90%; */
+      bottom: 150px;
+      /* padding-top: 80px; */
       color: #fff;
       text-decoration: none;
       font-size: 6em;
       background:rgb(0,0,0);
       width: 80px;
-      padding: 20px;
+      padding: 40px;
       text-align: center;
-      z-index: 1;
-      
+      /* z-index: 1; */
+            
       &:nth-of-type(1) {
         top:0; bottom:0; left:0;
         background: linear-gradient(-90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
@@ -65,9 +75,17 @@ h1 {
   }
 }
 
-// Remove the arrow for Mobile
+#img-obras:hover {
+  text-decoration: none;
+  margin: 0;
+  transform: none;
+}
+
+
+ /* Remove the arrow for Mobile */
 @media only screen and (max-width: 600px) {
   a.arrow__btn {
     display:none;
   }
 }
+
