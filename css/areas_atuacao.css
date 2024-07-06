@@ -230,12 +230,12 @@ a, a:hover {
 	
   .postcard.dark {
 		.postcard__text:before {
-			background: #18151f;
+			background-color: #18151f;
 		}
   }
 	.postcard.light {
 		.postcard__text:before {
-			background: #e1e5ea;
+			background-color: #e1e5ea;
 		}
   }
 }
@@ -368,3 +368,4 @@ a, a:hover {
 		);
 	}
 }
+

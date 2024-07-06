@@ -264,12 +264,11 @@ body {
 
 /* Seção 2 */
 
-.div-localizacao {
+/* .div-localizacao {
     margin-top: 20px;
-    padding: 0px;
-    width: 50%px;
-    height: 600px;
-}
+    padding-bottom: 4px;
+    
+} */
 
 .titulo-localizacao {
     color: #000;
@@ -277,7 +276,8 @@ body {
 }
 
 .frame-localizacao {
-    align-items: center;
+    
+    
 }
 
 .paragrafo-localizacao {
@@ -336,16 +336,16 @@ footer li:hover {
     color: #545454;
 }
 
-.row-1 {
-    color:#545454 !important;
+/* .row-1 {
+    color:#fff !important;
     
 }
 
 .row-2 {
     
-    color: #545454 !important;
+    color: #fff !important;
     
-}
+} */
 
 #rodape-social-media img {
     /* width: 25%; */

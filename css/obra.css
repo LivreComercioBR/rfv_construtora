@@ -1,5 +1,5 @@
 body {
-    background-color:  #eee;
+    background-color:  #fff;
   }
   .title {
    
@@ -27,16 +27,11 @@ body {
       margin-top:20px;
   }
   
-  .btn {
-    margin-top: auto;
-  }
-
-  /* footer */
-
-/* .container-fluid{
+  
+.container-fluid{
     margin-top: 101px;
     color:#000 !important;
-}
+} *
 
 .card{
     background-color: #F8F9FB !important;
@@ -45,6 +40,7 @@ body {
 p{
     font-size: calc(12px + (14 - 12) * ((100vw - 360px) / (1600 - 360))) !important; 
     display: fkex;
+    color: #545454;
 }
 
 h3{
@@ -53,6 +49,7 @@ h3{
 
 .social{
     font-size: 21px !important; 
+    color: #545454;
 }
 
 
@@ -61,18 +58,19 @@ h3{
 }
 
 
- footer{
+ footer {
     color:#1c8ce1 !important;
  }
 
  footer li{
     margin-top: 20px ;
     margin-bottom: 20px ;
-    color: #fff;
+    color: #545454;
 }
 
 footer a{
     text-decoration: none;
+    color: #545454;
 }
 
 footer li:hover {
@@ -85,11 +83,24 @@ footer li:hover {
 }
 
 .row-1{
-    background-color:#1E242A !important;
+    background-color:#fff !important;
+    color: #545454;
 }
 
-.row-2{
+.row-1 p, small {
+    color: #000 !important;
+}
+
+.row-2 {
     
-    background-color: #28323C !important;
+    background-color: #fff !important;
+}
+
+.row-2 p {
+    
+    color: #545454 !important;
 }
   
+.enviar-email {
+    padding-right: 10px;
+}
