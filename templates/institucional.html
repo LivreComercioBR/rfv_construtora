@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage - Construtora RFV</title>
+    <title>Institucional - Construtora RFV</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -12,13 +12,23 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
     <link rel="stylesheet" href="..//css/styles.css">
+    <link rel="stylesheet" href="..//css/sobre.css">
 
     <!-- Scripts -->
+    <!-- Jquery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 
     <!-- Google fonts -->
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,300&display=swap');
     </style>
+
+    <!-- Parallax Scrolling -->
+    <script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js"></script>
+    <!-- Progress bar -->
+    <!-- <link rel="stylesheet" href="js/progressbar.min.js"> -->
+
 
 </head>
 
@@ -71,86 +81,101 @@
     </header>
 
     <main>
-        <div class="container-fluid" id="MainSlide">
-            <div id="carouselExampleAutoplaying" class="carousel slide flex-fill" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <video src="https://mdbcdn.b-cdn.net/img/video/Tropical.mp4" type="video/mp4" class="d-block"
-                            alt="..." autoplay loop muted style="width: 100%; height: 35%;">
-                            <div class="carousel-caption d-block">
-                                <h2>Projetos únicos e personalizáveis</h2>
-
-                            </div>
+        <!-- Seção História -->
+        <div class="team-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h1 class="main-title">NOSSA HISTÓRIA</h1>
                     </div>
+                    <div class="col-md-3">
 
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
-                    data-bs-slide="prev">
+                    </div>
+                    <div class="col-md-3">
 
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
-                    data-bs-slide="next">
+                    </div>
+                    <div class="col-md-3">
 
-                    <span class="visually-hidden">Next</span>
-                </button>
-            </div>
-
-            <!-- Seção Especialidades -->
-            <div class="services-area">
-                <div class="container" id="container-area">
-                    <div class="row">
-                        <div class="col-12">
-                            <h3 class="main-title">ÁREAS DE ATUAÇÃO</h3>
-                        </div>
-                        <div class="col-12 col-sm-6 col-md-4 service-box">
-                            <img src="../img/Area_atuacao/Saneamento.png" alt="" style="width: 350px;" class="mb-3">
-                            <a class="btn btn-outline-danger" href="./saneamento.html">
-                                <h4>Saneamento</h4>
-                            </a>
-                        </div>
-                        <div class="col-12 col-sm-6 col-md-4 service-box">
-                            <img src="../img/Area_atuacao/Construindo_sonhos.png" alt="" style="width: 350px;"
-                                class="mb-3">
-                            <a class="btn btn-outline-danger" href="./infraestrutura.html">
-                                <h4>Infraestrutura</h4>
-                            </a>
-                        </div>
-
-                        <div class="col-12 col-sm-6 col-md-4 service-box">
-                            <img src="../img/Area_atuacao/Economize_tempo.png" alt="" style="width: 350px;"
-                                class="mb-3">
-                            <a class="btn btn-outline-danger" href="./construcao_civil.html">
-                                <h4>Construção Civil</h4>
-                            </a>
-                        </div>
+                    </div>
+                    <div class="col-md-3">
 
                     </div>
                 </div>
             </div>
-            <!-- Seção clientes -->
-            <div class="clientes-area">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12 mb-3">
-                            <h3 class="main-title">CONHEÇA ALGUNS CLIENTES QUE FAZEM PARTE DA NOSSA HISTÓRIA</h3>
-                        </div>
-                        <div class="col-12 mb-0 px-0 flex-row text-center">
-                            <img src="..//img/home/Lista de clientes.png" alt="" style="width: 100%; height: 90%;">
-                            <a class="btn btn-outline-danger mt-3 text-center" href="./clientes.html">VER CLIENTES</a>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-            <!-- Seção Team -->
-
         </div>
-    </main>
 
-    <div style="height: 273;" class="d-block d-md-none"></div>
-    <div style="height: 273;" class="d-none d-md-block d-lg-none"></div>
-    <div style="height: 273;" class="d-none d-lg-block"></div>
+        <!-- Seção Equipe -->
+        <div class="team-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h3 class="main-title">CONHEÇA NOSSA EQUIPE</h3>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card">
+                            <img src="../img/home/people1.png" alt="Pessoa1" class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="card-title">Roberta</h5>
+                                <p class="card-text">Setor de Marketing</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card">
+                            <img src="../img/home/people2.png" alt="Pessoa2" class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="card-title">Stelling</h5>
+                                <p class="card-text">Analista de Projetos</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card">
+                            <img src="../img/home/people3.png" alt="Pessoa3" class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="card-title">Renata</h5>
+                                <p class="card-text">Departamento de Pessoal</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card">
+                            <img src="../img/home/people4.png" alt="Pessoa4" class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="card-title">João Paulo</h5>
+                                <p class="card-text">CEO</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Seção Certificações -->
+        <div class="team-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h3 class="main-title">CERTIFICAÇÕES</h3>
+                    </div>
+                    <div class="col-md-3">
+
+                    </div>
+                    <div class="col-md-3">
+
+                    </div>
+                    <div class="col-md-3">
+
+                    </div>
+                    <div class="col-md-3">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </main>
 
     <footer>
         <div class="row mb-0 pt-4 pb-0 row-2 px-4 ml-7">
@@ -228,15 +253,14 @@
                     </div>
 
                     <div class="col-sm-4 div-expediente px-3"><small> Feito por Livre Comércio
-                            BR
+                            BR <span><i class="bi bi-globe2"></i></span>
                             <span class="whatsapp"><a href="https://wa.me/5519982325459"><img
                                         src="../img/redes_sociais/WhatsApp_238.png"
-                                        style="width: 4%;"></a></i></span></small> </div>
+                                        style="width: 5%;"></a></i></span></small> </div>
                 </div>
             </div>
         </div>
     </footer>
-
 
     <!-- Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"

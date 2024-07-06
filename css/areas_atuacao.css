@@ -37,6 +37,7 @@ a, a:hover {
 	text-align: center;
 	font-size: 2.5rem;
   padding-top: 15px;
+  color: #444;
 }
 
 /* Cards */
@@ -49,7 +50,7 @@ a, a:hover {
   margin: 0 0 2rem 0;
   overflow: hidden;
   position: relative;
-  color: #ffffff;
+  color: #444;
 
 	&.dark {
 		background-color: #18151f;
@@ -70,6 +71,7 @@ a, a:hover {
 		margin-bottom: 0.5rem;
 		font-weight: 500;
 		line-height: 1.2;
+    color: #444;
 	}
 	
 	.small {

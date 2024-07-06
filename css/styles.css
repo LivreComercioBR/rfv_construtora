@@ -20,7 +20,7 @@ body {
 /* Barra de navegação */
 
 .header, .navbar {
-    background-color: #545454;
+    background-color: #fff;
 }
 
 .navbar-toggler-icon {
@@ -51,7 +51,7 @@ body {
 }
 
 .nav-link {
-    color: #fff;
+    color: #545454;
 }
 
 .nav-link:hover {
@@ -72,7 +72,7 @@ body {
 /* Carrousel */
 
 /* #MainSlide, .carousel-inner, .carousel-item {
-    width: 400vh;
+    width: 200vh;
 } */
 
 #MainSlide, .carousel-caption {
@@ -258,7 +258,7 @@ body {
 /* Página home */
 
 .container-carousel {
-    height: 80vh;
+    height: 70vh;
 }
 
 
@@ -287,16 +287,26 @@ body {
 /* Footer */
 
 footer{
-    color:#5eb299 !important;
+    color:#545454 !important;
+    margin-left: 50px;
  }
+
+ .row-autoria {
+    margin-left: 50px;
+ }
+
+ /* .construtora {
+    margin-left: 0px;
+ } */
 
  footer li{
     margin-top: 20px ;
     margin-bottom: 20px ;
-    color: #fff;
+    color: #545454;
 }
 
 footer a{
+    color: #545454;
     text-decoration: none;
 }
 
@@ -305,15 +315,16 @@ footer li:hover {
 }
   
 .text-light {
-    color: #5eb299;
+    color: #545454;
 }
 
 #links-rodape {
-    color: #fff;
+    color: #545454;
+    padding-right: 2rem;
 }
 
 #logo-rodape {
-    width: 50px;
+    width: 70px;
 }
  
 .Careers{ 
@@ -322,14 +333,110 @@ footer li:hover {
 }
 
 .whatsapp i {
+    color: #545454;
+}
+
+.row-1 {
+    color:#545454 !important;
+    
+}
+
+.row-2 {
+    
+    color: #545454 !important;
+    
+}
+
+#rodape-social-media img {
+    /* width: 25%; */
+    padding-left: 0.4rem;
+}
+
+.linkedin {
+    padding-right: 0.2rem;
+}
+
+@media screen and (max-width: 600px) {
+    footer {
+      margin-left: 0; 
+      };
+      .row, row-1, row-2 {
+        margin-left: 0;
+        padding-left: 3rem;
+      }
+      
+    }
+ 
+
+.div-institucional {
+    text-align: left;
+    
+}
+
+.div-expediente {
+    text-align: left;
+    
+}
+
+.links-centrais-rodape {
+    text-align: left;
+    padding-bottom: 6px;
+}
+
+.links-centrais-rodape a:hover {
     color: #5eb299;
 }
 
-.row-1{
-    background-color:#545454 !important;
-}
+/* Redes sociais lado direito da página */
 
-.row-2{
+.redes-sociais-1 {
+    width: 8.5rem;
+    position: fixed;
+    bottom: 2rem;
+    right: -3rem;
     
-    background-color: #545454 !important;
-}
+  }
+  
+  
+  .redes-sociais-1:hover {
+    transform: translate(0.5rem, 0.5rem);
+  }
+
+  .redes-sociais-1 img {
+    width: 50%;
+        
+  }
+
+  .redes-sociais-2 {
+    width: 8.5rem;
+    position: fixed;
+    bottom: 6rem;
+    right: -3rem;
+    
+  }
+    
+  .redes-sociais-2:hover {
+    transform: translate(0.5rem, 0.5rem);
+  }
+
+  .redes-sociais-2 img {
+    width: 44%;
+        
+  }
+
+  .redes-sociais-3 {
+    width: 8.5rem;
+    position: fixed;
+    bottom: 10rem;
+    right: -3rem;
+    
+  }
+    
+  .redes-sociais-3:hover {
+    transform: translate(0.5rem, 0.5rem);
+  }
+
+  .redes-sociais-3 img {
+    width: 50%;
+        
+  }
