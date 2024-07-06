@@ -275,11 +275,6 @@ body {
     text-align: center;
 }
 
-.frame-localizacao {
-    
-    
-}
-
 .paragrafo-localizacao {
     color: #000;
 }
@@ -440,3 +435,22 @@ footer li:hover {
     width: 50%;
         
   }
+
+@media only screen and (max-width: 600px) {
+    #contato-menu {
+        img {
+            width: 20%;
+            right: -2.5rem;
+        }
+    };
+    .redes-sociais-2 {
+        img {
+            width: 10%;
+        }
+    };
+    .redes-sociais-3 {
+        img {
+            width: 10%;
+        }
+    }
+}
