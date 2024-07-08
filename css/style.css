@@ -8180,7 +8180,9 @@ h1, h2, h3, h4, h5,
 .img {
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center center; }
+  background-position: center center;
+  position: absolute;
+  z-index: 0; }
 
 .owl-carousel {
   position: relative; }
@@ -8257,6 +8259,8 @@ h1, h2, h3, h4, h5,
     position: relative;
     border-radius: 15px;
     overflow: hidden;
+    z-index: 0;
+    
     -webkit-box-shadow: 0px 20px 35px -30px rgba(0, 0, 0, 0.26);
     -moz-box-shadow: 0px 20px 35px -30px rgba(0, 0, 0, 0.26);
     box-shadow: 0px 20px 35px -30px rgba(0, 0, 0, 0.26);
@@ -8299,3 +8303,5 @@ h1, h2, h3, h4, h5,
       letter-spacing: 1px;
       display: inline-block;
       margin-bottom: 5px; }
+
+      
