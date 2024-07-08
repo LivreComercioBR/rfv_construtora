@@ -76,9 +76,9 @@ body {
 
 /* Carrousel */
 
-/* #MainSlide, .carousel-inner, .carousel-item {
+#MainSlide, .carousel-inner, .carousel-item {
     width: 200vh;
-} */
+}
 
 #MainSlide, .carousel-caption {
     top: 50%;
@@ -92,7 +92,7 @@ body {
 #MainSlide, .carousel-caption p {
     font-size: 22px;
     font-weight: 300;
-    margin-bottom: 50px;
+    margin-bottom: 0px;
     
 }
 
