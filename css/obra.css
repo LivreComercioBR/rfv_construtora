@@ -111,4 +111,13 @@ footer li:hover {
 
 .div-iframe {
     padding-top: 2px;
+    padding-right: 3rem;
 }
+
+@media (max-width: 600px) {
+    #div-iframe iframe {
+      /* width: 200;  */
+      margin-right: 3rem;
+      }
+      
+    }
