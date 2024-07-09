@@ -73,6 +73,10 @@ body {
     padding: 1rem .8rem;
 }
 
+/* .navbar-projetos {
+    margin-left: 2rem;
+} */
+
 
 /* Carrousel */
 
@@ -458,24 +462,18 @@ footer li:hover {
         
 }
 
-/* @media only screen and (max-width: 600px) {
-    #contato-menu-insta {
-        img {
-            width: 40%;
-            right: 1rem;
-            position: relative;
-            z-index: 999;
-        }
-    }
-}
+/* Página do projeto */
 
-@media only screen and (max-width: 600px) {
-    #contato-menu-linkd {
+@media (max-width: 600px) {
+    #contato-menu-whats-p,
+    #contato-menu-insta-p,
+    #contato-menu-linkd-p {
         img {
             width: 40%;
-            right: 1rem;
+            right: 1.7rem;
             position: relative;
-            z-index: 999;
+            z-index: 999 !important;
         }
     }
-} */
+        
+}

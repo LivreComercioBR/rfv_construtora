@@ -448,8 +448,8 @@ pre {
 
 .container {
   width: 100%;
-  padding-right: 25px;
-  padding-left: 25px;
+  padding-right: 15px;
+  padding-left: 15px;
   margin-right: auto;
   margin-left: auto; }
   @media (min-width: 576px) {
@@ -8304,4 +8304,6 @@ h1, h2, h3, h4, h5,
       display: inline-block;
       margin-bottom: 5px; }
 
-      
+.navbar-projetos {
+  margin-right: 2rem;
+}
