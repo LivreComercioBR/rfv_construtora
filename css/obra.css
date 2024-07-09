@@ -37,11 +37,11 @@ body {
     background-color: #F8F9FB !important;
 } */
 
-p{
+/* p{
     font-size: calc(12px + (14 - 12) * ((100vw - 360px) / (1600 - 360))) !important; 
     display: fkex;
     color: #545454;
-}
+} */
 
 h3{
     font-size: calc(24px + (30 - 24) * ((100vw - 360px) / (1600 - 360))) !important; 
@@ -101,6 +101,14 @@ footer li:hover {
     color: #545454 !important;
 }
   
-.enviar-email {
+/* .enviar-email {
     padding-right: 10px;
+} */
+
+/* .formulario-msg {
+    padding-left: 5rem;
+} */
+
+.div-iframe {
+    padding-top: 2px;
 }

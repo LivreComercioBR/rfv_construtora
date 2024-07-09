@@ -254,7 +254,26 @@ body {
     padding: 15px;
 }
 
-/* Seção Clientes */
+/* Seção contatos */
+
+.secao-contatos {
+    width: 50%;
+    display: inline-block;
+    align-items: center;
+}
+
+.secao-frame-localizacao {
+    width: 100%;
+    height: 600%;
+    display: flex;
+    align-self: center;
+}
+
+/* #iframe-localiza {
+    width: 100%;
+    height: 100%;
+} */
+
 
 
 
@@ -273,11 +292,11 @@ body {
 
 /* Seção 2 */
 
-/* .div-localizacao {
-    margin-top: 20px;
-    padding-bottom: 4px;
+.div-localizacao {
+    align-items: start;
+    text-align: left;
     
-} */
+}
 
 .titulo-localizacao {
     color: #000;
@@ -287,6 +306,10 @@ body {
 .paragrafo-localizacao {
     color: #000;
 }
+
+/* .email-construtoral {
+    text-transform: ;
+} */
 
 /* Footer */
 

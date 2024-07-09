@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gás - Construtora RFV</title>
+    <title>Contatos - Construtora RFV</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -12,15 +12,13 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
 
-    <link rel="stylesheet" href="..//css/styles.css">
-    <link rel="stylesheet" href="..//css/obra.css">
-
+    <link rel="stylesheet" href="../css/styles.css">
+    <!-- <link rel="stylesheet" href="..//css/obra.css"> -->
 
     <!-- Google fonts -->
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,300&display=swap');
     </style>
-
 
 
 </head>
@@ -62,93 +60,108 @@
         </div>
     </header>
 
-    <main class="pt-5">
-        <div class="container py-3 pt-5">
-            <div class="title text-center">
-                <h1>Nossos Contatos</h1>
-                <div class="row d-flex pt-5">
-                    <div class="col-sm-6 mb-2 d-flex flex-column div-localizacao">
-                        <a href="https://wa.me/5519987203059" id="whatsapp-menu"><img src="..//img/home/WhatsApp250.png"
-                                alt="WhatsApp" style="width: 50px;">Gustavo</a>
-                        <a href="https://wa.me/5519997586977" id="whatsapp-menu"><img src="..//img/home/WhatsApp250.png"
-                                alt="WhatsApp" style="width: 50px;">Jesiel</a>
-                        <b>
-                            <p class="mt-3">Email:
-                        </b> comercial@construtorarfv.com.br</p>
+    <main>
+        <div class="container">
 
-                    </div>
-                    <div class="col-sm-6 mb-2 div-localizacao">
-                        <br>
-                        <h3 class="text-danger">Endereço</h3>
-                        <p class="paragrafo-localizacao"> Rua José Whitehead, 13, Jardim Santa Rosa,
-                            Nova Odessa, SP
-                        </p>
-                        <p class="paragrafo-localizacao"> <b>Expediente</b>: De Seg à Sex das 07:00
-                            as
-                            18:00
-                        </p>
-                    </div>
+            <div class="row d-flex justify-content-center pt-5">
+                <div class="col-sm-6 mb-2 d-flex flex-column">
+                    <a href="https://wa.me/5519987203059" id="whatsapp-menu"><img src="..//img/home/WhatsApp250.png"
+                            alt="WhatsApp" style="width: 50px;">Gustavo</a>
+                    <a href="https://wa.me/5519997586977" id="whatsapp-menu"><img src="..//img/home/WhatsApp250.png"
+                            alt="WhatsApp" style="width: 50px;">Jesiel</a>
+                    <b>
+                        <p class="mt-3">Email:
+                    </b> comercial@construtorarfv.com.br</p>
+
+                </div>
+                <div class="col-sm-6 mb-2">
+                    <br>
+                    <h3 class="text-danger">Endereço</h3>
+                    <p class="paragrafo-localizacao"> Rua José Whitehead, 13, Jardim Santa Rosa,
+                        Nova Odessa, SP
+                    </p>
+                    <p class="paragrafo-localizacao"> <b>Expediente</b>: De Seg à Sex das 07:00
+                        as
+                        18:00
+                    </p>
                 </div>
             </div>
-            <!-- Card Start -->
-            <div class="card">
-                <div class="row p-3">
 
-                    <div class="col-md-6 div-iframe">
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d20805.272539823447!2d-47.28874498647071!3d-22.806638620384255!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbr!4v1720493254385!5m2!1sen!2sbr"
-                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <section class="d-flex justify-content-center">
+                <form class="mr-3" action="https://formsubmit.co/your@email.com" method="POST">
+                    <h1 class="mb-7">Envie-nos um Email</h1>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" placeholder=" " autofocus id="textNome" name="username">
+                        <label for="textNome"><strong>Nome Completo</strong></label>
                     </div>
+                    <div class="form-floating mb-3">
+                        <input type="email" class="form-control" placeholder=" " autofocus id="textEmail" name="email"
+                            required>
+                        <label for="textEmail"><strong>Seu melhor email</strong></label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <textarea class="form-control" name="mensagem" id="textMensagem" cols="30" rows="20"
+                            style="height: 200px;" placeholder=" "></textarea>
+                        <label for="textMensagem">Mensagem</label>
+                    </div>
+                    <button class="btn btn-lg btn-danger" type="button">Enviar
+                        Email</button>
+                </form>
+            </section>
+            <section class="d-flex justify-content-center flex-fill">
+                <div class="mr-3">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3678.3689898057796!2d-47.290744825453096!3d-22.788787433663078!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c8978be2d87797%3A0x522c454d513bebe5!2sR.%20Jos%C3%A9%20Whitehead%2C%2013%20-%20Jardim%20Santa%20Rosa%2C%20Nova%20Odessa%20-%20SP%2C%2013385-056!5e0!3m2!1sen!2sbr!4v1718991873021!5m2!1sen!2sbr"
+                        style="border:0; width: 200; height: 500;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </section>
 
-                    <div class="col-md-6 ml-5">
-                        <div class="ml-6" style="width: 100%;">
-                            <form action="https://formsubmit.co/your@email.com" method="POST">
-                                <h1 class="mb-7">Envie-nos um Email</h1>
-                                <div class="form-floating mb-3">
-                                    <input type="text" class="form-control" placeholder=" " autofocus id="textNome"
-                                        name="username">
-                                    <label for="textNome"><strong>Nome Completo</strong></label>
-                                </div>
-                                <div class="form-floating mb-3">
-                                    <input type="email" class="form-control" placeholder=" " autofocus id="textEmail"
-                                        name="email" required>
-                                    <label for="textEmail"><strong>Seu melhor email</strong></label>
-                                </div>
-                                <div class="form-floating mb-3">
-                                    <textarea class="form-control" name="mensagem" id="textMensagem" cols="30" rows="20"
-                                        style="height: 200px;" placeholder=" "></textarea>
-                                    <label for="textMensagem">Mensagem</label>
-                                </div>
-                                <button class="btn btn-lg btn-danger" type="button">Enviar
-                                    Email</button>
-                            </form>
+
+            <!-- Seção redes sociais -->
+            <div class="services-area pt-0">
+                <div class="container pt-0" id="container-area">
+                    <div class="row pt-0">
+
+                        <div class="col-md-4 service-box pt-0">
+                            <div class="redes-sociais-1">
+                                <a class="nav-link" href="https://wa.me/5519987203059" id="contato-menu-whats"><img
+                                        src="../img/redes_sociais/WhatsApp_lateral.png"></img></a>
+                            </div>
                         </div>
+                        <div class="col-md-4 service-box pt-0">
+                            <div class="redes-sociais-2">
+                                <a class="nav-link" href="#" id="contato-menu-insta"><img
+                                        src="..//img/redes_sociais/Instagram250.png"></img></a>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 service-box pt-0">
+                            <div class="redes-sociais-3">
+                                <a class="nav-link" href="#" id="contato-menu-linkd"><img
+                                        src="..//img/redes_sociais/Linkedin_sf.png"></img></a>
+                            </div>
+                        </div>
+
                     </div>
-
-
-
                 </div>
             </div>
-            <!-- End of card -->
 
         </div>
-
-
-
-        <br>
-        <br>
-
-
     </main>
+    <div style="height: 273;" class="d-block d-md-none"></div>
+    <div style="height: 273;" class="d-none d-md-block d-lg-none"></div>
+    <div style="height: 273;" class="d-none d-lg-block"></div>
 
     <footer>
+
         <div class="row mb-0 pt-4 pb-0 row-2 px-4 ml-7">
             <div class="col-12 ml-5">
                 <div class="row row-2">
                     <div class="col-sm-4 my-sm-0 mt-5">
                         <div class="justify-content-left px-2">
-                            <p id="links-rodape"><span></span><b><i class="bi bi-telephone"></i></b> (19) 3466-0000</p>
+                            <p id="links-rodape"><span></span><b><i class="bi bi-telephone"></i></b> (19) 3466-0000
+                            </p>
                         </div>
                         <div class="justify-content-left" id="rodape-social-media">
                             <a href="https://wa.me/5519987203059"><img src="..//img/redes_sociais/Instagram250.png"
@@ -171,22 +184,22 @@
 
                     <div class="col-sm-4 my-sm-0 mt-5 div-institucional ">
                         <div class="links-centrais-rodape px-2">
-                            <a href="/templates/institucional.html">
+                            <a href="./institucional.html">
                                 Institucional
                             </a>
                         </div>
                         <div class="links-centrais-rodape px-2">
-                            <a href="/templates/contatos.html">
+                            <a href="./contatos.html">
                                 Contato
                             </a>
                         </div>
                         <div class="links-centrais-rodape px-2">
-                            <a href="/templates/clientes.html">
+                            <a href="./clientes.html">
                                 Clientes
                             </a>
                         </div>
                         <div class="links-centrais-rodape px-2">
-                            <a href="/templates/projetos.html">
+                            <a href="./projetos.html">
                                 Obras
                             </a>
                         </div>
@@ -196,7 +209,8 @@
                     <div class="col-sm-4 my-sm-0 mt-5 div-expediente">
                         <ul class="list-unstyled">
 
-                            <li class="mt-0 px-2">Dias de Expediente <br><span class="Careers">De Seg a Sex </span></li>
+                            <li class="mt-0 px-2">Dias de Expediente <br><span class="Careers">De Seg a Sex </span>
+                            </li>
 
 
                             <li class="mt-0 px-2">Horário <br><span class="Careers">Das 07:00h as
@@ -220,36 +234,8 @@
                     <div class="col-sm-4 div-expediente px-3"><small> Feito por Livre Comércio
                             BR
                             <span class="whatsapp"><a href="https://wa.me/5519982325459"><img
-                                        src="./img/redes_sociais/WhatsApp_238.png"
-                                        style="width: 5%;"></a></i></span></small> </div>
-                </div>
-            </div>
-        </div>
-        <!-- Seção redes sociais -->
-        <div class="services-area pt-0">
-            <div class="container pt-0" id="container-area">
-                <div class="row pt-0">
-
-                    <div class="col-md-4 service-box pt-0">
-                        <div class="redes-sociais-1">
-                            <a class="nav-link" href="https://wa.me/5519987203059" id="contato-menu-whats"><img
-                                    src="../img/redes_sociais/WhatsApp_lateral.png"></img></a>
-                        </div>
-                    </div>
-                    <div class="col-md-4 service-box pt-0">
-                        <div class="redes-sociais-2">
-                            <a class="nav-link" href="#" id="contato-menu-insta"><img
-                                    src="..//img/redes_sociais/Instagram250.png"></img></a>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4 service-box pt-0">
-                        <div class="redes-sociais-3">
-                            <a class="nav-link contato-menus" href="#" id="contato-menu-linkd"><img
-                                    src="..//img/redes_sociais/Linkedin_sf.png"></img></a>
-                        </div>
-                    </div>
-
+                                        src="../img/redes_sociais/WhatsApp_238.png"
+                                        style="width: 4%;"></a></i></span></small> </div>
                 </div>
             </div>
         </div>
