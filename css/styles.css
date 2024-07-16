@@ -257,38 +257,40 @@ p, li {
   
   /* RESPONSIVE CSS
   -------------------------------------------------- */
-  @media (min-width: 30em) {
-    /* Bump up size of carousel content */
+  /* Bump up size of carousel content */
+@media (min-width: 30em) {
     .featurette {
-      margin: 3rem;
-      
+    margin: 3rem;
     }
+    
+}
 
 
-  @media (min-width: 40em) {
-    /* Bump up size of carousel content */
-    .featurette {
-      margin: 3rem;
-      
+@media (min-width: 40em) {
+/* Bump up size of carousel content */
+.featurette {
+    margin: 3rem;
+    
+}
+
+.featurette-heading {
+    font-size: 50px;
     }
+}
+
+@media (min-width: 62em) {
+.featurette-heading {
+    margin: 3rem;
+    }
+}
   
-    .featurette-heading {
-      font-size: 50px;
+@media (min-width: 75em) {
+/* Bump up size of carousel content */
+.featurette {
+    margin: 3rem;
+    
     }
-  }
-  
-  @media (min-width: 62em) {
-    .featurette-heading {
-      margin: 3rem;
-    }
-  }
-  
-  @media (min-width: 75em) {
-    /* Bump up size of carousel content */
-    .featurette {
-      margin: 3rem;
-      
-    }
+}
 
 
 /* Seção Obras */
