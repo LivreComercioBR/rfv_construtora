@@ -18,9 +18,11 @@ body {
     margin: 0;
 }
 
-.container {
+/* .container {
     padding: 3rem 0;
-}
+} */
+
+
 
 p, li {
     color: #444;
@@ -133,7 +135,7 @@ p, li {
 
 #size-carousel {
     width: 100vw;
-    min-height: 100vh;
+    max-height: 100vh;
 }
 
 /* Sobre a empresa */
@@ -179,13 +181,6 @@ p, li {
     }
 }
 
-@media screen and (max-width: 600px) {
-    #container-area {
-      img {
-        width: 250px;
-      };
-    }
-  }
 
 #about-list {
     list-style: none;
@@ -204,7 +199,10 @@ p, li {
 /* Seção especialidades */
 
 .service-box {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* text-align: center; */
     margin-bottom: 50px;
 
 }
@@ -213,10 +211,11 @@ p, li {
     transition: .5s;
 }
 
-.service-box i {
+.service-box a {
     font-size: 36px;
     margin-bottom: 20px;
     color: #444;
+    max-width: 35rem;
 }
 
 .service-box h4 {
@@ -227,6 +226,22 @@ p, li {
 .service-box:hover > i, .service-box:hover h4 {
     color: #5eb299;
 }
+
+@media screen and (max-width: 36em) {
+    #container-area {
+        justify-content: center;
+      img {
+        max-width: auto;
+        margin: auto;
+        
+      };
+      & a {
+        margin: auto;
+        justify-content: center;
+      }
+    }
+  }
+
 
 .marketing .col-lg-4 {
     margin-bottom: 1.5rem;
@@ -390,12 +405,19 @@ p, li {
 
 footer{
     color:#545454 !important;
-    margin-left: 50px;
+    /* margin-left: 50px; */
+    justify-content: center;
  }
 
- .row-autoria {
-    margin-left: 50px;
+ .rodape {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
  }
+
+ /* .row-autoria {
+    margin-left: 50px;
+ } */
 
  /* .construtora {
     margin-left: 0px;
@@ -464,7 +486,7 @@ footer li:hover {
       };
       .row, row-1, row-2 {
         margin-left: 0;
-        padding-left: 3rem;
+        /* padding-left: 3rem; */
       }
       
     }
@@ -581,81 +603,4 @@ footer li:hover {
         
 }
 
-/* Footer Bootstrap */
 
-/* .bd-placeholder-img {
-    font-size: 1.125rem;
-    text-anchor: middle;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    user-select: none;
-  }
-
-  @media (min-width: 768px) {
-    .bd-placeholder-img-lg {
-      font-size: 3.5rem;
-    }
-  }
-
-  .b-example-divider {
-    width: 100%;
-    height: 3rem;
-    background-color: rgba(0, 0, 0, .1);
-    border: solid rgba(0, 0, 0, .15);
-    border-width: 1px 0;
-    box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
-  }
-
-  .b-example-vr {
-    flex-shrink: 0;
-    width: 1.5rem;
-    height: 100vh;
-  }
-
-  .bi {
-    vertical-align: -.125em;
-    fill: currentColor;
-  }
-
-  .nav-scroller {
-    position: relative;
-    z-index: 2;
-    height: 2.75rem;
-    overflow-y: hidden;
-  }
-
-  .nav-scroller .nav {
-    display: flex;
-    flex-wrap: nowrap;
-    padding-bottom: 1rem;
-    margin-top: -1px;
-    overflow-x: auto;
-    text-align: center;
-    white-space: nowrap;
-    -webkit-overflow-scrolling: touch;
-  }
-
-  .btn-bd-primary {
-    --bd-violet-bg: #712cf9;
-    --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
-
-    --bs-btn-font-weight: 600;
-    --bs-btn-color: var(--bs-white);
-    --bs-btn-bg: var(--bd-violet-bg);
-    --bs-btn-border-color: var(--bd-violet-bg);
-    --bs-btn-hover-color: var(--bs-white);
-    --bs-btn-hover-bg: #6528e0;
-    --bs-btn-hover-border-color: #6528e0;
-    --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
-    --bs-btn-active-color: var(--bs-btn-hover-color);
-    --bs-btn-active-bg: #5a23c8;
-    --bs-btn-active-border-color: #5a23c8;
-  }
-
-  .bd-mode-toggle {
-    z-index: 1500;
-  }
-
-  .bd-mode-toggle .dropdown-menu .active .bi {
-    display: block !important;
-  } */
