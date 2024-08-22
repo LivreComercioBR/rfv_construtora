@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block title %}
+Áreas de Atuação - Construtora RFV
+{% endblock title %}
+
+{% block head %}
+<!-- <link rel="stylesheet" href="{% static 'css/areas_atuacao.css' %}"> -->
+{% endblock head %}
+
+{% block body %}
+<main>
+    <hr class="featurette-divider">
+
+    {% for area in areas %}
+    <div class="row featurette">
+        <div class="col-md-5">
+            <img src="{{area.imagem.url}}" alt="construcao_civil" width="500px" height="90%" loading="lazy">
+        </div>
+        <div class="col-md-7">
+            <h2 class="featurette-heading fw-normal ">{{area.titulo}}</h2>
+            <p>{{area.descricao}}</p>
+            <a href="{% url 'area_atuacao' area.id %}" class="btn btn-outline-danger btn-lg">Saiba Mais</a>
+        </div>
+
+    </div>
+    {% endfor %}
+</main>
+{% endblock body %}

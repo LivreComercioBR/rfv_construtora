@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block title %}
+Nossos Clientes - Construtora RFV
+{% endblock title %}
+
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/areas_atuacao.css' %}">
+{% endblock head %}
+
+
+{% block body %}
+<main class="secao-obras">
+    <section class="light pt-5">
+        <div class="container py-4">
+            <h1 class="h1 text-center" id="pageHeaderTitle" style="color: #000;">Conheça Alguns de Nossos Clientes
+            </h1>
+            {% for cliente in clientes %}
+            <article class="postcard light blue">
+                <a class="postcard__img_link" href="#">
+                    <img class="postcard__img" src="{{cliente.logo.url}}" alt="Image Title" style="width: 90%;"
+                        loading="lazy" />
+                </a>
+                <div class="postcard__text t-dark">
+                    <h1 class="postcard__title blue px-5"><a href="./gas.html">{{cliente.nome}}</a></h1>
+
+                    <div class="postcard__bar px-5"></div>
+                    <div class="postcard__preview-txt px-5">{{cliente.endereco}}</div>
+                    <a href="./gas.html" class="btn  btn-outline-danger ">Saiba Mais...</a>
+                </div>
+            </article>
+            {% endfor %}
+        </div>
+    </section>
+</main>
+{% endblock body %}

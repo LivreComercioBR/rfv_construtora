@@ -1,0 +1,133 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block title %}
+Institucional - Construtora RFV
+{% endblock title %}
+
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/sobre.css' %}">
+{% endblock head %}
+
+
+{% block body %}
+<main>
+    <!-- Seção História -->
+    <div class="team-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="main-title">NOSSA HISTÓRIA</h1>
+                </div>
+                <div class="col-md-3">
+
+                </div>
+                <div class="col-md-3">
+
+                </div>
+                <div class="col-md-3">
+
+                </div>
+                <div class="col-md-3">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Seção Equipe -->
+    <div class="team-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h3 class="main-title">CONHEÇA NOSSA EQUIPE</h3>
+                </div>
+                {% for pessoa in team %}
+                <div class="col-md-3">
+                    <div class="card">
+                        <img src="{{pessoa.foto.url}}" alt="Pessoa1" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">{{pessoa.nome}}</h5>
+                            <p class="card-text">{{pessoa.função}}</p>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    <!-- Seção Certificações -->
+    <div class="team-area pt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h3 class="main-title">CERTIFICAÇÕES</h3>
+                </div>
+                <div class="col-12">
+                    <div class="card w-100 mb-3 certificacao">
+                        <div class="card-body ">
+                            <h3 class="card-title">ABNT NBR ISO9003-2024</h3>
+                            <p class="card-text">
+                                Certificado de conformidade da Norma ISO9003-2024 para o escopo de Execução de Obras de
+                                Edificações, Saneamento Básico e Construção Civil e, ainda, Construção, Manutenção,
+                                Montagem e Condicionamento de Dutos de Gás.
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-12 pt-3">
+                    <div class="card w-100 mb-3 certificacao">
+                        <div class="card-body ">
+                            <h3 class="card-title">ABNT NBR ISO9003-2024</h3>
+                            <p class="card-text">
+                                Certificado de conformidade da Norma ISO9003-2024 para o escopo de Execução de Obras de
+                                Edificações, Saneamento Básico e Construção Civil e, ainda, Construção, Manutenção,
+                                Montagem e Condicionamento de Dutos de Gás.
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Seção Sobre -->
+        <div class="team-area pt-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h3 class="main-title">QUEM SOMOS</h3>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 mb-3 mb-sm-0">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h2 class="card-title">Um pouco da nossa história</h2>
+                                    <p class="card-text">Uma página Sobre Nós existe para compartilhar a história e a
+                                        história de um negócio e fornecer uma conexão mais profunda com os clientes.</p>
+                                    <p>Os consumidores querem conhecer a equipe por trás da marca que eles estão
+                                        apoiando. Uma página Sobre Nós fornece o imóvel perfeito para puxar a cortina
+                                        para trás e revelar quem está trabalhando nos bastidores.</p>
+                                    <p>Mais importante, porém, uma página Sobre Nós facilita a confiança entre o
+                                        consumidor e o negócio.</p>
+                                    <p>Mais de <span style="color: brown;">33%</span> dos consumidores dizem que a
+                                        “confiança” é um fator essencial na hora de decidir quais negócios apoiar.</p>
+                                    <p>Com uma página Sobre nós, você pode começar a formar uma relação emocional com os
+                                        clientes e <span style="color: brown;">se envolver com eles</span> em um nível
+                                        mais profundo.</p>
+                                    <p>Então, como você pode criar uma que ressoe? Vamos ver alguns dos componentes que
+                                        você precisa incluir em sua página Sobre Nós.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+</main>
+{% endblock body %}

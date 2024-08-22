@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block title %}
+Obras - Construtora RFV
+{% endblock title %}
+
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+<link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/4.5.6/css/ionicons.min.css">
+<!-- <link rel="stylesheet" href="..//css/style.css"> -->
+{% endblock head %}
+
+
+{% block body %}
+<section class="ftco-section">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-12 text-center">
+                <h2 class="heading-section mb-5">Nossos Projetos</h2>
+            </div>
+            <div class="col-md-12">
+                <div class="featured-carousel owl-carousel">
+                    {% for obra in obras %}
+                    <div class="item">
+                        <div class="work">
+                            <div class="img d-flex align-items-end justify-content-center">
+
+                                <div class="text w-100 text-center">
+                                    <img src="{{obra.imagens.all.0}}" alt="" loading="lazy">
+                                    <h2 class="text-center pt-2">{{obra.nome_da_obra}}</h2>
+                                    <a href="{% url 'obra' obra.id %}"
+                                        class="btn btn-outline-danger btn-lg text-center">Ver
+                                        Detalhes</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script src="{% static 'js/jquery.min.js' %}"></script>
+<script src="{% static 'js/popper.js' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<script src="{% static 'js/owl.carousel.min.js' %}"></script>
+<script src="{% static 'js/main.js' %}"></script>
+
+{% endblock body %}
