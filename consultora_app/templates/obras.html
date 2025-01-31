@@ -11,42 +11,82 @@ Obras - Construtora RFV
 <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
 <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/4.5.6/css/ionicons.min.css">
-<!-- <link rel="stylesheet" href="..//css/style.css"> -->
+<link rel="stylesheet" href="{% static 'css/styles.css' %}">
 {% endblock head %}
 
 
 {% block body %}
-<section class="ftco-section">
+<section class="ftco-section secao-obras section-pagina-obras">
     <div class="container">
         <div class="row">
-
-            <div class="col-md-12 text-center">
-                <h2 class="heading-section mb-5">Nossos Projetos</h2>
-            </div>
-            <div class="col-md-12">
-                <div class="featured-carousel owl-carousel">
-                    {% for obra in obras %}
-                    <div class="item">
-                        <div class="work">
-                            <div class="img d-flex align-items-end justify-content-center">
-
-                                <div class="text w-100 text-center">
-                                    <img src="{{obra.imagens.all.0}}" alt="" loading="lazy">
-                                    <h2 class="text-center pt-2">{{obra.nome_da_obra}}</h2>
-                                    <a href="{% url 'obra' obra.id %}"
-                                        class="btn btn-outline-danger btn-lg text-center">Ver
-                                        Detalhes</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    {% endfor %}
+            <div class="div-texto-pagina-obras d-flex">
+                <div class="col-sm-1 paragrafo-amarelo-obras">
+                </div>
+                <div class="col-sm-5 div-obras-realizadas">
+                    <h1 class="title-obras">Obras Realizadas</h1>
+                    <br>
                 </div>
             </div>
+
+        </div>
+
+        <div class="container">
+
+
+            <div class="featured-carousel owl-carousel">
+                {% for obra in obras %}
+                <div class="item">
+                    <a href="{% url 'obra' obra.id %}">
+                        <img src="{{obra.imagens.all.0}}" alt="" loading="lazy">
+
+                    </a>
+                </div>
+
+                {% endfor %}
+            </div>
+            <ion-icon name="ios-heart"></ion-icon>
+
+
         </div>
     </div>
 </section>
+
+<!-- SEÇÃO OBRAS EM ANDAMENTO -->
+<section class="ftco-section secao-obras-em-adamento section-pagina-obras">
+    <div class="container">
+        <div class="row">
+            <div class="div-texto-pagina-obras2 d-flex">
+                <div class="col-sm-1 paragrafo-amarelo-obras">
+                </div>
+                <div class="col-sm-5 div-obras-realizadas">
+                    <h1 class="title-obras">Obras Em Andamento</h1>
+                    <br>
+                </div>
+            </div>
+            <!-- <h2 class="subtitle-obras">Obras Em Andamento</h2> -->
+        </div>
+
+        <div class="container">
+
+
+            <div class="featured-carousel owl-carousel">
+                {% for obra in obras %}
+                <div class="item">
+                    <a href="{% url 'obra' obra.id %}">
+                        <img src="{{obra.imagens.all.0}}" alt="" loading="lazy">
+
+                    </a>
+                </div>
+
+                {% endfor %}
+            </div>
+            <ion-icon name="ios-heart"></ion-icon>
+
+
+        </div>
+    </div>
+</section>
+
 <script src="{% static 'js/jquery.min.js' %}"></script>
 <script src="{% static 'js/popper.js' %}"></script>
 <script src="{% static 'js/bootstrap.min.js' %}"></script>

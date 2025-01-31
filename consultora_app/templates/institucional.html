@@ -8,126 +8,110 @@ Institucional - Construtora RFV
 
 
 {% block head %}
-<link rel="stylesheet" href="{% static 'css/sobre.css' %}">
+<!-- <link rel="stylesheet" href="{% static 'css/sobre.css' %}"> -->
 {% endblock head %}
 
 
 {% block body %}
 <main>
-    <!-- Seção História -->
-    <div class="team-area">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <h1 class="main-title">NOSSA HISTÓRIA</h1>
-                </div>
-                <div class="col-md-3">
-
-                </div>
-                <div class="col-md-3">
-
-                </div>
-                <div class="col-md-3">
-
-                </div>
-                <div class="col-md-3">
-
-                </div>
+    <!-- Seção Banner Institucional -->
+    <div class="container-fluid">
+        <section class="banner-institucional">
+            <div class="div-banner-institucional ">
+                <h1 class="tituloInstitucional">Institucional</h1>
             </div>
-        </div>
+        </section>
     </div>
+    <!-- Seção Experiência -->
+    <div class="geral-institucional">
+        <section class="secao-22anos">
+            <div class="container container-institucional">
+                <div class="row div-institucional-excelencia">
+                    <div class="col-md-6 d-flex col6-institucional">
+                        <div class="col-1 paragrafo-amarelo paragrafo-amarelo-institucional">
 
-    <!-- Seção Equipe -->
-    <div class="team-area">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <h3 class="main-title">CONHEÇA NOSSA EQUIPE</h3>
-                </div>
-                {% for pessoa in team %}
-                <div class="col-md-3">
-                    <div class="card">
-                        <img src="{{pessoa.foto.url}}" alt="Pessoa1" class="card-img-top">
-                        <div class="card-body">
-                            <h5 class="card-title">{{pessoa.nome}}</h5>
-                            <p class="card-text">{{pessoa.função}}</p>
+                        </div>
+                        <div class="col-11 texto-logo-institucional">
+
+                            <h2>Mais de 22 Anos de Excelência em Construção Civil</h2>
+                            <br>
+                            <p>Desde 2002, a RFV Construtora é <br>
+                                referência em obras de reforma, <br>
+                                manutenção e infraestrutura para o <br>
+                                setor público e privado. Com mais de <br>
+                                duas décadas de história, entregamos <br> qualidade, eficiência e compromisso <br>
+                                em cada projeto realizado.</p>
+                            <button class="botao-entrar-contato"><a class="botao-conheca-obras"
+                                    href="{% url 'obras' %}">ENTRAR
+                                    EM
+                                    CONTATO</a></button>
+
                         </div>
                     </div>
-                </div>
-                {% endfor %}
-            </div>
-        </div>
-    </div>
 
-    <!-- Seção Certificações -->
-    <div class="team-area pt-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <h3 class="main-title">CERTIFICAÇÕES</h3>
-                </div>
-                <div class="col-12">
-                    <div class="card w-100 mb-3 certificacao">
-                        <div class="card-body ">
-                            <h3 class="card-title">ABNT NBR ISO9003-2024</h3>
-                            <p class="card-text">
-                                Certificado de conformidade da Norma ISO9003-2024 para o escopo de Execução de Obras de
-                                Edificações, Saneamento Básico e Construção Civil e, ainda, Construção, Manutenção,
-                                Montagem e Condicionamento de Dutos de Gás.
-                            </p>
-                        </div>
+                    <div class="col-md-6 d-flex col6-institucional2">
+                        <div class="col texto-logo-institucional logo-institucional institu-logo"
+                            style="background-color: black;">
+                            <div class="img-logo-institucional">
+                                <img src="{% static 'img/home/logoempresa.png' %}" alt="">
 
-                    </div>
-                </div>
-                <div class="col-12 pt-3">
-                    <div class="card w-100 mb-3 certificacao">
-                        <div class="card-body ">
-                            <h3 class="card-title">ABNT NBR ISO9003-2024</h3>
-                            <p class="card-text">
-                                Certificado de conformidade da Norma ISO9003-2024 para o escopo de Execução de Obras de
-                                Edificações, Saneamento Básico e Construção Civil e, ainda, Construção, Manutenção,
-                                Montagem e Condicionamento de Dutos de Gás.
-                            </p>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Seção Sobre -->
-        <div class="team-area pt-5">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <h3 class="main-title">QUEM SOMOS</h3>
-                    </div>
-                    <div class="row">
-                        <div class="col-12 mb-3 mb-sm-0">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h2 class="card-title">Um pouco da nossa história</h2>
-                                    <p class="card-text">Uma página Sobre Nós existe para compartilhar a história e a
-                                        história de um negócio e fornecer uma conexão mais profunda com os clientes.</p>
-                                    <p>Os consumidores querem conhecer a equipe por trás da marca que eles estão
-                                        apoiando. Uma página Sobre Nós fornece o imóvel perfeito para puxar a cortina
-                                        para trás e revelar quem está trabalhando nos bastidores.</p>
-                                    <p>Mais importante, porém, uma página Sobre Nós facilita a confiança entre o
-                                        consumidor e o negócio.</p>
-                                    <p>Mais de <span style="color: brown;">33%</span> dos consumidores dizem que a
-                                        “confiança” é um fator essencial na hora de decidir quais negócios apoiar.</p>
-                                    <p>Com uma página Sobre nós, você pode começar a formar uma relação emocional com os
-                                        clientes e <span style="color: brown;">se envolver com eles</span> em um nível
-                                        mais profundo.</p>
-                                    <p>Então, como você pode criar uma que ressoe? Vamos ver alguns dos componentes que
-                                        você precisa incluir em sua página Sobre Nós.</p>
-                                </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
+        <!-- Seção Certificações -->
+
+        <div class="container container-valores">
+            <div class="row" id="valores-empresa">
+                <div class="col-lg-4 div-valores">
+                    <img src="{% static 'img/institucional/missao.jpeg' %}" alt="" class="img-valores">
+                    <h2 class="titulo-valores">Missão</h2>
+                    <p class="paragrafo-valores div-valores0 text-center">Oferecer soluções completas e <br>
+                        eficientes para obras públicas e <br>
+                        privadas, garantindo qualidade <br>
+                        e sustentabilidade.</p>
+
+                </div>
+                <div class="col-lg-4 div-valores div-valores1" id="collg4">
+                    <img src="{% static 'img/institucional/visao.jpeg' %}" alt="" class="img-valores img-valores1">
+                    <h3 class="titulo-valores">Visão</h3>
+                    <p class="paragrafo-valores text-center">Ser reconhecida como a<br>
+                        principal pareceira em<br>
+                        obras de infraestrutura e<br>
+                        saneamento no Brasil</p>
+
+                </div><!-- /.col-lg-4 -->
+                <div class="col-lg-4 div-valores div-valores2" id="collg4">
+                    <img src="{% static 'img/institucional/diamante.jpeg' %}" alt="" class="img-valores img-valores1">
+                    <h2 class="titulo-valores">Valores</h2>
+                    <p class="paragrafo-valores text-center">Compromisso<br>
+                        Transparência, Qualidade<br>
+                        Inovação, Sustentabilidade.</p>
+
+                </div><!-- /.col-lg-4 -->
+
+            </div>
+        </div>
+
+        <!-- Última Seção Institucional -->
+        <div class="team-area pt-5">
+            <div class="container container-missaovalores">
+                <div class="row" id="missao-visao-valores">
+                    <div class="col-lg-4 mb-3 mb-sm-0 imgComTitle imgComTitle1">
+                        <img src="{% static 'img/institucional/img22Anos.jpeg' %}" alt="">
+                    </div>
+                    <div class="col-lg-4 mb-3 mb-sm-0 imgComTitle imgComTitle2">
+                        <img src="{% static 'img/institucional/imgConstruindo.jpeg' %}" alt="">
+                    </div>
+                    <div class="col-lg-4 mb-3 mb-sm-0 imgComTitle imgComTitle3">
+                        <img src="{% static 'img/institucional/imgExcelencia.jpeg' %}" alt="">
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 </main>
 {% endblock body %}

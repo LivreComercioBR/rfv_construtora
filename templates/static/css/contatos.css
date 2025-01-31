@@ -1,0 +1,117 @@
+.secao-page-contatos {
+    margin-top: 12rem;
+}
+
+/* .container-pages-contato {
+    margin: 0rem;
+} */
+
+.titulo-contatos {
+    font-size: 6rem;
+}
+
+.paragrafo-page-contatos {
+    font-size: 1rem;
+}
+
+.email-address {
+    text-transform: lowercase;
+    font-size: 2rem;
+}
+
+#whatsapp-menu {
+    font-size: 2rem;
+    text-decoration: none;
+    /* text-align: start !important; */
+}
+
+.container-iframe {
+    width: 100%;
+}
+
+.div-page-localizacao h3 {
+    font-size: 3rem;
+}
+
+
+.div-page-localizacao p {
+    font-size: 2rem;
+}
+
+.form-floating {
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+}
+
+.input-page-contato {
+    font-size: 1.5rem;
+}
+
+@media (max-width: 30rem) {
+    .titulo-contatos {
+        font-size: 3rem;
+    }
+    .email-address {
+        text-align: start;
+    }
+    .div-page-localizacao {
+        text-align: start;
+        font-size: 1.5rem;
+    }
+    .div-page-localizacao h3 {
+        font-size: 2rem;
+    }
+    .col-6-form,
+    .col-6-iframe {
+        padding-top: 3rem;
+    }
+}
+
+@media (min-width: 36rem) {
+    .titulo-contatos {
+        font-size: 3.5rem;
+    }
+    .col-6-form,
+    .col-6-iframe {
+        padding-top: 3rem;
+    }
+}
+
+@media (min-width: 48rem) {
+    .titulo-contatos {
+        font-size: 4rem;
+    }
+    .col-6-form,
+    .col-6-iframe {
+        padding-top: 3.5rem;
+    }
+}
+
+@media (min-width: 62rem) {
+    .titulo-contatos {
+        font-size: 4.5rem;
+    }
+    .col-6-form,
+    .col-6-iframe {
+        padding-top: 3rem;
+    }
+    .botao-enviar-page-contato {
+        font-size: 1.8rem;
+        padding: 1rem;
+    }
+}
+
+@media (min-width: 75rem) {
+    .container-iframe,
+    .container-contatos {
+        max-width: 90%;
+    }
+    .titulo-contatos {
+        font-size: 5rem;
+    }
+    .col-6-form,
+    .col-6-iframe {
+        padding-top: 3rem;
+    }
+    
+}

@@ -13,10 +13,10 @@
 
 
 {% block body %}
-<main class="secao-obras">
-    <div class="container pt-5">
+<main class="secao-obra">
+    <div class="container container-obra">
 
-        <div class="row g-3 pt-5">
+        <div class="row g-3">
             <div class="col-12 col-sm-6 obra">
                 <img src="{{obra.imagens.all.0}}" alt="" class="img-thumbnail" id="imgProduto" loading="lazy">
                 <br class="clearfix">
@@ -33,14 +33,20 @@
                 <h1>{{obra.nome_da_obra}}</h1>
                 <p>{{obra.detalhes}}</p>
 
-                <a href="{% url 'obras' %}" class="btn btn-outline-success btn-lg mt-3">
-                    <i class="bi bi-shop"></i> Ver outras obras
-                </a>
+                <div class="row">
+                    <div class="col col-botao-obra">
+                        <button class="botao-entrar-contato"><a class="botao-conheca-obras" href="{% url 'obras' %}">Ver
+                                outras obras</a></button>
+                        <button class="botao-entrar-contato-obra1"><a class="botao-conheca-obras"
+                                href="{{obra.link}}">Assistir vídeo</a></button>
+                    </div>
+                </div>
             </div>
         </div>
         <!-- Seção redes sociais -->
 
     </div>
+
 </main>
 
 <!-- Script para trocar as imagens dos imóveis -->

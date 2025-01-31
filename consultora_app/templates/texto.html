@@ -1,0 +1,101 @@
+<div class="row">
+    <div class="col-12 col-md-6 py-5 div-contato">
+
+        <div class=" ">
+            <h2 class="titulo-contato"><span class="traco-contato">-</span> Contato
+            </h2>
+            <p class="paragrafo-contato"><b>Preencha o formulário</b> ao lado que entraremos em
+                contato com
+                você, estaremos prontos
+                para atender as suas necessidades.</p>
+            <div class="linha-central-contato">
+
+            </div>
+            <p class="paragrafo-contato pt-5">Nos siga nas redes sociais</p>
+        </div>
+        <div class="col d-flex ">
+            <div class="col rede-sociais"><i class="bi bi-youtube text-redes-sociais">YouTube</i></div>
+            <div class="col rede-sociais"><i class="bi bi-facebook text-redes-sociais">Facebook</i></div>
+            <div class="col rede-sociais"><i class="bi bi-instagram text-redes-sociais">Instagram</i></div>
+        </div>
+    </div>
+    <div class="col-12 col-md-6 py-5 div-contato2">
+        <form>
+            <div class="input-group mb-3">
+                <span class="input-group-text label-form-contact" id="Nome">Nome&nbsp&nbsp&nbsp&nbsp</span>
+                <input type="text" class="form-control label-form-contact" id="Nome" aria-describedby="basic-addon3"
+                    placeholder="Informe o seu nome">
+            </div>
+            <div class="input-group mb-3">
+                <span class="input-group-text label-form-contact" id="Email">Email&nbsp&nbsp&nbsp&nbsp&nbsp</span>
+                <input type="text" class="form-control label-form-contact" id="Email" aria-describedby="basic-addon3"
+                    placeholder="Informe o seu melhor email">
+            </div>
+            <div class="input-group mb-3">
+                <span class="input-group-text label-form-contact" id="Telefone">Telefone</span>
+                <input type="text" class="form-control label-form-contact" id="Telefone" aria-describedby="basic-addon3"
+                    placeholder="Informe o seu telefone">
+            </div>
+            <div class="input-group mb-3">
+                <span class="input-group-text label-form-contact" id="Cidade">Cidade&nbsp&nbsp</span>
+                <input type="text" class="form-control label-form-contact" id="Cidade" aria-describedby="basic-addon3"
+                    placeholder="Informe a sua cidade">
+            </div>
+
+            <div class="col-auto">
+                <button type="submit" class="btn mb-3 botao-form-contato">Enviar</button>
+            </div>
+        </form>
+    </div>
+
+
+
+
+    <!-- Formulário Antigo de Contato -->
+    <div class="card">
+        <div class="row d-flex p-3">
+
+            <div class="col pb-3">
+                <div id="div-iframe">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3678.3689898057796!2d-47.290744825453096!3d-22.788787433663078!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c8978be2d87797%3A0x522c454d513bebe5!2sR.%20Jos%C3%A9%20Whitehead%2C%2013%20-%20Jardim%20Santa%20Rosa%2C%20Nova%20Odessa%20-%20SP%2C%2013385-056!5e0!3m2!1sen!2sbr!4v1720532273437!5m2!1sen!2sbr"
+                        width="600px" height="350px" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+
+            <div class="col ml-5 pb-3">
+                <div class="ml-6">
+                    <form action="{% url 'contato' %}" method="POST">{% csrf_token %}
+                        <h1 class="mb-7">Envie-nos um Email</h1>
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" placeholder=" " autofocus id="textNome"
+                                name="username">
+                            <label for="textNome"><strong>Nome Completo</strong></label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" placeholder=" " autofocus id="textAssunto"
+                                name="assunto">
+                            <label for="textAssunto"><strong>Assunto</strong></label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="email" class="form-control" placeholder=" " autofocus id="textEmail"
+                                name="email" required>
+                            <label for="textEmail"><strong>Seu melhor email</strong></label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <textarea class="form-control" name="mensagem" id="textMensagem" cols="30" rows="20"
+                                style="height: 200px;" placeholder=" "></textarea>
+                            <label for="textMensagem">Mensagem</label>
+                        </div>
+                        <button class="btn btn-lg btn-danger" type="submit">Enviar
+                            Email</button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+</div>

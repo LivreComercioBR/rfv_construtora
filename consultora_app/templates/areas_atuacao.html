@@ -11,21 +11,29 @@
 {% endblock head %}
 
 {% block body %}
-<main>
-    <hr class="featurette-divider">
 
-    {% for area in areas %}
-    <div class="row featurette">
-        <div class="col-md-5">
-            <img src="{{area.imagem.url}}" alt="construcao_civil" width="500px" height="90%" loading="lazy">
-        </div>
-        <div class="col-md-7">
-            <h2 class="featurette-heading fw-normal ">{{area.titulo}}</h2>
-            <p>{{area.descricao}}</p>
-            <a href="{% url 'area_atuacao' area.id %}" class="btn btn-outline-danger btn-lg">Saiba Mais</a>
+<section class="section-area-atuacao">
+    <div class="container">
+        <div class="row  d-flex row-area-atuacao">
+            {% for area in areas %}
+            <div class="col-lg-6 align-items-center justify-content-center img-areas-atuacao">
+                <img src="{{area.imagem.url}}" alt="construcao_civil" loading="lazy">
+            </div>
+            <div class="col-lg-6">
+                <h2 class="titles-homepage">{{area.titulo}}</h2>
+                <p>{{area.descricao}}</p>
+                <button class="botao-area-atuacao">
+                    <a href="{% url 'area_atuacao' area.id %}">Saiba
+                        Mais</a></button>
+                &nbsp;
+                <button class="botao-area-atuacao">
+                    <a href="{% url 'homepage' %}">Homepage</a></button>
+            </div>
+            <hr class="featurette-divider">
+            {% endfor %}
         </div>
 
     </div>
-    {% endfor %}
-</main>
+</section>
+
 {% endblock body %}

@@ -7,80 +7,323 @@ Homepage - Construtora RFV
 
 
 {% block head %}
-
+<link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+<link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/4.5.6/css/ionicons.min.css">
+<link rel="stylesheet" href="{% static 'css/styles.css' %}">
 {% endblock head %}
 
 
 {% block body %}
-<main>
-    <div class="container-fluid" id="MainSlide">
-        <section>
-            <div id="carouselExampleAutoplaying size-carousel" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active container-carousel">
-                        <video src="{{video.link}}" type="video/mp4" class="d-block" alt="..." autoplay loop muted>
-                            <div class="carousel-caption d-block">
-                                <h2>Projetos únicos e personalizáveis</h2>
+
+<!-- Banner Central Homepage -->
+<div class="container-fluid">
+
+    <section class="banner-principal">
+
+        <div class="div-banner-central ">
+
+            {% if messages %}
+            {% for message in messages %}
+            <div class="alert {{message.tags}}" style="font-size: 20px;">
+                {{message}}
+            </div>
+            {% endfor %}
+            {% endif %}
+
+            <h2 class="titulo22anos">22 Anos Construindo Confiança e </h2>
+            <h2 class="titulo22anos">Qualidade em Obras Públicas</h2>
+            <p class="paragrafo-banner-central">Especialista em reformas, manutenção e infraestrutura para o
+                setor público</p>
+            <button class="botao-obras"><a class="botao-conheca-obras" href="{% url 'obras' %}">CONHEÇA NOSSAS
+                    OBRAS</a></button>
+
+        </div>
+
+
+
+        <div class="linha-central">
+
+        </div>
+
+    </section>
+</div>
+<!--Fim do container fluid-->
+
+<!-- INÍCIO DO CONTAINER GERAL -->
+
+<!-- Seção Destaques -->
+<section class="section-container-destatques">
+    <div class="container">
+        <div class="row secao-destaques">
+            <div class="col-md-6 div-destaques">
+
+                <div class="div-texto-destaques d-flex">
+                    <div class="col-sm-1 paragrafo-amarelo-destaque0 paragrafo-amarelo-destaques">
+
+                    </div>
+                    <div class="col-sm-5 div-titulo-destaques">
+                        <h2 class="titles-homepage">Destaques da RFV</h2>
+                        <br>
+                    </div>
+                </div>
+                <div><img class="img-destaques" src="{% static 'img/home/22AnosdeExperiencia.png' %}" alt=""
+                        load="lazy"></div>
+                <div><img class="img-destaques" src="{% static 'img/home/construindoComExcelencia.png' %}" alt="">
+                </div>
+                <div><img class="img-destaques" src="{% static 'img/home/setorPublicoComoFoco.jpeg' %}" alt=""
+                        load="lazy"></div>
+                <div><img class="img-destaques" src="{% static 'img/home/ExcelenciaEmInfraestrutura.png' %}" alt=""
+                        load="lazy">
+                </div>
+
+            </div>
+            <div class="col-md-6 div-destaques2">
+                <div class="p-0 bg-body-tertiary ">
+                    <img src="{% static 'img/home/ImagemSecao2Homepage.png' %}" alt="" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- NOVA SEÇÃO ÁREA ATUACAO-->
+
+<section class="ftco-section secao-obras secao-atuacao-home">
+    <div class="container">
+        <div class="row">
+            <div class="div-texto-pagina-obras div-area-atuacao d-flex">
+                <div class="col-sm-1 paragrafo-amarelo-obras0">
+                </div>
+                <div class="col-sm-5 div-titulo-atuacao">
+                    <h2 class="titles-homepage">Áreas de Atuação</h2>
+                    <br>
+                </div>
+            </div>
+            <h5 class="h6-expertise">Com expertise comprovada, atendemos em diversas frentes do setor público e
+                privado</h5>
+        </div>
+
+        <div class="container">
+
+
+            <div class="featured-carousel owl-carousel">
+                {% for area in areas_atuacao %}
+                <div class="item img-atuacao">
+                    <a href="{% url 'area_atuacao' area.id %}">
+                        <img src="{{area.imagem.url}}" alt="" loading="lazy">
+                    </a>
+                </div>
+
+                {% endfor %}
+            </div>
+            <ion-icon name="ios-heart"></ion-icon>
+
+
+        </div>
+    </div>
+</section>
+
+<!-- Seção Obras Realizadas-->
+
+<div class="container container-obras section-container-obras">
+    <div class="row row-obras">
+        <div class="div-texto-obras div-texto-obras-home d-flex">
+            <div class="col-sm-1 paragrafo-amarelo-obras">
+            </div>
+            <div class="col-sm-7 div-obras-et-logo">
+                <h1 class="titles-homepage">Obras Realizadas</h1>
+                <br>
+            </div>
+            <div class="col-sm-4 mb-3 div-logoempresa-obras">
+                <img src="{% static 'img/home/logoempresa.png' %}" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="row row-obras-home d-flex justify-content-center align-items-center">
+
+
+        <div class="col-6 mb-0 flex-row text-center div-obras-home">
+            <a href="./clientes.html"><img class="img-obras-home" src="{% static 'img/obras/obra1.png' %}" alt=""
+                    loading="lazy"></a>
+        </div>
+        <div class="col-6 mb-0 flex-row text-center div-obras-home">
+            <a href="./clientes.html"><img src="{% static 'img/obras/obra2.png' %}" alt=""
+                    style="width: 100%; height: 90%;" loading="lazy"></a>
+
+        </div>
+        <div class="col-6 mb-0 flex-row text-center div-obras-home">
+            <a href="./clientes.html"><img src="{% static 'img/obras/obra3.png' %}" alt=""
+                    style="width: 100%; height: 90%;" loading="lazy"></a>
+        </div>
+        <div class="col-6 mb-0 flex-row text-center div-obras-home">
+            <a href="./clientes.html"><img src="{% static 'img/obras/obra4.png' %}" alt=""
+                    style="width: 100%; height: 90%;" loading="lazy"></a>
+        </div>
+        <div class="col-6 mb-0 flex-row text-center div-obras-home">
+            <a href="./clientes.html"><img src="{% static 'img/obras/obra5.png' %}" alt=""
+                    style="width: 100%; height: 90%;" loading="lazy"></a>
+        </div>
+        <div class="col-6 mb-0 flex-row text-center div-obras-home">
+            <a href="./clientes.html"><img src="{% static 'img/obras/obra6.png' %}" alt=""
+                    style="width: 100%; height: 90%;" loading="lazy"></a>
+        </div>
+        <div class="col-12 d-flex justify-content-around">
+            <div></div>
+            <div>
+                <button class="botao-ver-mais"><a href="{% url 'obras' %}">VEJA MAIS</a></button>
+            </div>
+            <div></div>
+        </div>
+    </div>
+</div>
+
+<!-- Seção clientes -->
+<div class="clientes-area">
+    <div class="container">
+        <div class="row">
+            <div class="row row-clientes-title">
+                <div class="div-texto-clientes d-flex">
+                    <div class="col-sm-1 paragrafo-amarelo-clientes">
+                    </div>
+                    <div class="col-sm-11 div-titulo-clientes">
+                        <h2 class="titles-homepage title-clientes">Alguns dos nossos clientes</h2>
+                        <br>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 mb-0 px-0 flex-row text-center nomes-clientes">
+                <img class="img-nomes-clientes" src="{% static 'img/home/NomesClientes.png' %}" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Seção Contato -->
+<div class="container-fluid contato">
+    <section class="secao-contato">
+        <div class="container-fluid gradiente">
+            <div class="container d-flex gap-4 align-items-center">
+                <div class="row row-contato">
+                    <div class="col-12 col-md-6 div-contato justify-content-center align-self-center">
+
+                        <div class=" ">
+
+                            <div class="row row-txt-contato">
+                                <div class="div-texto-contato d-flex">
+                                    <div class="col-sm-1 paragrafo-amarelo-contato">
+                                    </div>
+                                    <div class="col-sm-3 div-titulo-contato">
+                                        <h1 class="title-contato">Contato</h1>
+                                        <br>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="paragrafo-contato"><b>Preencha o formulário</b> ao lado que entraremos em
+                                contato com
+                                você, estaremos prontos
+                                para atender as suas necessidades.</p>
+                            <div class="linha-central-contato">
 
                             </div>
+                            <p class="paragrafo-contato redes">Nos siga nas redes sociais</p>
+                        </div>
+                        <div class="container d-flex cols-redes-sociais">
+                            <div class="row gap-2">
+                                <div class="col rede-sociais py-2  text-center"><a href="#"><i
+                                            class="bi bi-youtube text-redes-sociais">&nbsp;YouTube</i></a></div>
+                                <div class="col rede-sociais py-2 px-3 text-center"><a href=""><i
+                                            class="bi bi-facebook text-redes-sociais">&nbsp;Facebook</i></a>
+                                </div>
+                                <div class="col rede-sociais py-2 px-3 text-center"><a href=""><i
+                                            class="bi bi-instagram text-redes-sociais">&nbsp;Instagram</i></a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+                    <div class="col-12 col-md-6 div-contato1 justify-content-center align-self-center">
+                        <form method="POST" action="{% url 'homepage' %}">
+                            {% csrf_token %}
+                            <div class="input-group mb-3">
+                                <span class="input-group-text label-form-contact"
+                                    id="Nome">Nome&nbsp&nbsp&nbsp&nbsp</span>
+                                <input type="text" class="form-control input-form-contact" id="Nome"
+                                    aria-describedby="basic-addon3" placeholder="Informe o seu nome" name="username">
+                            </div>
+                            <div class="input-group mb-3">
+                                <span class="input-group-text label-form-contact" id="Assunto">Assunto&nbsp</span>
+                                <input type="text" class="form-control input-form-contact" id="Assunto"
+                                    aria-describedby="basic-addon3" placeholder="Assunto" name="assunto">
+                            </div>
+                            <div class="input-group mb-3">
+                                <span class="input-group-text label-form-contact"
+                                    id="Email">Email&nbsp&nbsp&nbsp&nbsp&nbsp</span>
+                                <input type="text" class="form-control input-form-contact" id="Email"
+                                    aria-describedby="basic-addon3" placeholder="Informe o seu melhor email"
+                                    name="email">
+                            </div>
+                            <div class="input-group mb-3">
+                                <span class="input-group-text label-form-contact" id="Telefone">Telefone</span>
+                                <input type="text" class="form-control input-form-contact" id="Telefone"
+                                    aria-describedby="basic-addon3" placeholder="Informe o seu telefone"
+                                    name="telefone">
+                            </div>
+                            <div class="form-floating mb-3">
+                                <textarea class="form-control input-page-contato-home" name="mensagem"
+                                    id="textMensagemHome" cols="30" rows="20" style="height: 200px;"
+                                    placeholder=" "></textarea>
+                                <label for="textMensagemHome" class="label-msg">Mensagem</label>
+                            </div>
 
+                            <div class="col-auto">
+                                <button type="submit" class="btn mb-3 botao-form-contato">Enviar</button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
-                    data-bs-slide="prev">
-
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
-                    data-bs-slide="next">
-
-                    <span class="visually-hidden">Next</span>
-                </button>
             </div>
-        </section>
-    </div>
-    <!--Fim do container fluid-->
 
-    <div class="container">
-        <!-- Seção Especialidades -->
-        <div class="services-area">
-            <div class="container" id="container-area">
-                <div class="row text-center">
-                    <h3 class="main-title">Áreas de Atuação</h3>
-                </div>
-                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
-                    {% for area in areas_atuacao %}
-                    <div class="col px-3 service-box ">
-                        <img src="{{area.imagem.url}}" alt="" class="mb-3 img-fluid" loading="lazy">
-                        <a class="btn btn-outline-danger" href="{% url 'area_atuacao' area.id %}">
-                            <h4>{{area.titulo}}</h4>
-                        </a>
+        </div>
+    </section>
+</div>
+
+
+<!-- Seção LOCALIZAÇÃO -->
+<section class="section-localizacao">
+    <div class="row d-flex justify-content-center container-localizacao">
+        <div class="container">
+            <div class="row row-obras">
+                <div class="div-texto-obras div-texto-endereco d-flex justify-content-center">
+                    <div class="col-sm-1 paragrafo-amarelo-destaques">
                     </div>
-                    {% endfor %}
+                    <div class="col-sm-3 div-endereco">
+                        <h2 class="titles-homepage">Nosso Endereço</h2>
+                        <br>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-12 div-iframe-home">
+                <div id="div-iframe-endereco ">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3678.3689898057796!2d-47.290744825453096!3d-22.788787433663078!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c8978be2d87797%3A0x522c454d513bebe5!2sR.%20Jos%C3%A9%20Whitehead%2C%2013%20-%20Jardim%20Santa%20Rosa%2C%20Nova%20Odessa%20-%20SP%2C%2013385-056!5e0!3m2!1sen!2sbr!4v1720532273437!5m2!1sen!2sbr"
+                        style="border:0; width: 95%; height: 70vh;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
         </div>
-
-        <!-- Seção clientes -->
-        <div class="clientes-area">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 mb-3">
-                        <h3 class="main-title">CONHEÇA ALGUNS CLIENTES QUE FAZEM PARTE DA NOSSA HISTÓRIA</h3>
-                    </div>
-                    <div class="col-12 mb-0 px-0 flex-row text-center">
-                        <img src="{{banner}}" alt="" style="width: 100%; height: 90%;" loading="lazy">
-                        <a class="btn btn-outline-danger mt-3 text-center btn-lg botao-clientes"
-                            href="./clientes.html">VER CLIENTES</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
     </div>
-</main>
 
-<div style="height: 273;" class="d-block d-md-none"></div>
-<div style="height: 273;" class="d-none d-md-block d-lg-none"></div>
-<div style="height: 273;" class="d-none d-lg-block"></div>
+</section>
+
+
+<!-- FIM DO CONTAINER GERAL -->
+
+<script src="{% static 'js/jquery.min.js' %}"></script>
+<script src="{% static 'js/popper.js' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<script src="{% static 'js/owl.carousel.min.js' %}"></script>
+<script src="{% static 'js/main.js' %}"></script>
 {% endblock body %}

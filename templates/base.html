@@ -7,6 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}{% endblock title %}</title>
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="{% static 'img/home/favicon.jpeg' %}" class="img-favicon">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <!-- Bootstrap Icons -->
@@ -18,7 +21,7 @@
 
     <!-- Google fonts -->
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,300&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,700;1,300&display=swap');
     </style>
 
     {% block head %}{% endblock head %}
@@ -27,11 +30,13 @@
 
 <body>
     <header>
-        <div class="container" id="nav-container">
-            <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container-fluid">
+            <nav class="navbar navbar-expand-lg fixed-top align-items-center">
                 <!-- Aqui vai um container -->
-                <a class="navbar-brand" href="#"><img src="{% static 'img/home/logo100.png' %}" alt="Logo empresa"
-                        id="logo">Construtora RFV</a>
+                <div class="div-logo-menu">
+                    <a class="navbar-brand" href="{% url 'homepage' %}"><img
+                            src="{% static 'img/home/logoempresa.png' %}" alt="Logo empresa" id="logo"></a>
+                </div>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -40,109 +45,90 @@
                 <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
 
                     <div class="nav-item" id="home-menu">
-                        <a class="nav-link" aria-current="page" href="{% url 'homepage' %}">Home</a>
+                        <a class="nav-link" aria-current="page" href="{% url 'homepage' %}">HOME</a>
                     </div>
                     <div class="nav-item">
-                        <a class="nav-link" href="{% url 'institucional' %}" id="agencia-menu">Institucional</a>
+                        <a class="nav-link" href="{% url 'institucional' %}" id="agencia-menu">INSTITUCIONAL</a>
                     </div>
                     <div class="nav-item">
-                        <a class="nav-link" href="{% url 'areas_atuacao' %}" id="servicos-menu">Áreas de
-                            Atuação</a>
+                        <a class="nav-link" href="{% url 'areas_atuacao' %}" id="servicos-menu">ÁREAS DE
+                            ATUAÇAO</a>
                     </div>
                     <div class="nav-item">
-                        <a class="nav-link" href="{% url 'obras' %}" id="time-menu">Obras</a>
+                        <a class="nav-link" href="{% url 'obras' %}" id="time-menu">OBRAS</a>
                     </div>
 
                     <div class="nav-item">
-                        <a class="nav-link" href="{% url 'contato'  %}" id="contato-menu">Contato</a>
+                        <a class="nav-link" href="{% url 'contato'  %}" id="contato-menu">CONTATO</a>
                     </div>
 
                 </div>
             </nav>
+
         </div>
     </header>
 
     {% block body %}{% endblock body %}
 
-    <footer>
-        <div class="container rodape">
-            <div class="row row-2 ml-5">
-                <div class="col-sm-4 mt-5">
-                    <div class="justify-content-left px-2">
-                        <p id="links-rodape"><span></span><b><i class="bi bi-telephone-fill"></i></b> +55 (19)
-                            3466-0000
-                        </p>
-                    </div>
-                    <div class="justify-content-left" id="rodape-social-media">
-                        <a href="https://wa.me/5519987203059"><img
-                                src="{% static 'img/redes_sociais/Instagram250.png' %}" style="width: 10%;"></img></a>
-                        <a href="https://wa.me/5519987203059"><img
-                                src="{% static 'img/redes_sociais/WhatsApp_238.png' %}" style="width: 10%;"></img></a>
-                        <a href="https://wa.me/5519987203059"><img src="{% static 'img/redes_sociais/linkedln.png' %}"
-                                style="width: 10%;"></img></a>
-                    </div>
-                    <div class="row justify-content-left">
-                        <p class="mt-3"><i class="bi bi-envelope-at-fill"></i>
-                            comercial@construtorarfv.com.br</p>
-                        <p> Rua José Whitehead, 13, Jardim Santa
-                            Rosa,<br>
-                            Nova Odessa, SP
-                        </p>
-                    </div>
-                </div>
-
-
-                <div class="col-sm-4 mt-5 div-institucional ">
-                    <div class="links-centrais-rodape px-2">
-                        <a href="{% url 'institucional' %}">
-                            Institucional
-                        </a>
-                    </div>
-                    <div class="links-centrais-rodape px-2">
-                        <a href="{% url 'contato'  %}">
-                            Contato
-                        </a>
-                    </div>
-                    <div class="links-centrais-rodape px-2">
-                        <a href="{% url 'clientes' %}">
-                            Clientes
-                        </a>
-                    </div>
-                    <div class="links-centrais-rodape px-2">
-                        <a href="{% url 'obras' %}">
-                            Obras
-                        </a>
-                    </div>
-
-                </div>
-
-                <div class="col-sm-4 mt-5 div-expediente">
-                    <ul class="list-unstyled">
-                        <li class="mt-0 px-2">Dias de Expediente <br><span class="Careers">De Seg a Sex </span>
-                        </li>
-                        <li class="mt-0 px-2">Horário <br><span class="Careers">Das 07:00h as
-                                17:00h</span></li>
-                    </ul>
-                </div>
+    <!-- Novo Footer -->
+    <div class="container-fluid container-rodape">
+        <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top div-central-footer">
+            <div class="col mb-3 div-logo-footer">
+                <a href="{% url 'homepage' %}"
+                    class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none">
+                    <img src="{% static 'img/home/logoempresa.png' %}" alt="">
+                </a>
+                <p class="paragrafo-rodape">22 Anos Construindo Confiança e Qualidade em Obras Públicas</p>
 
             </div>
 
-            <div class="row row-2 ml-7">
-                <div class="col-sm-4 text-left px-2"><small class="feito-por">&nbsp &#9400;2024 - RFV Construtora
-                    </small>
-                </div>
-                <div class="col-sm-4 text-left div-institucional px-3">
-                    <img src="{% static 'img/home/logo100.png' %}" alt="Logo empresa" id="logo-rodape">
-                </div>
+            <div class="col mb-3">
 
-                <div class="col-sm-4 div-expediente px-3"><small class="feito-por"> Feito por Livre Comércio
-                        BR
-                        <span class="whatsapp"><a href="https://wa.me/5519982325459"><img
-                                    src="{%  static 'img/redes_sociais/WhatsApp_238.png' %}"
-                                    style="width: 5%;"></a></i></span></small> </div>
+            </div>
+
+            <div class="col mb-3">
+
+            </div>
+
+            <div class="col mb-3 div-links-footer">
+                <h5 class="titulos-rodape">Páginas</h5>
+                <ul class="nav flex-column ul-links-footer">
+                    <li class="nav-item mb-4"><a href="{% url 'homepage' %}" class="nav-link p-0 links-footer">HOME</a>
+                    </li>
+                    <li class="nav-item mb-4"><a href="{% url 'institucional' %}"
+                            class="nav-link p-0 links-footer">INSTITUCIONAL</a>
+                    </li>
+                    <li class="nav-item mb-4"><a href="{% url 'areas_atuacao' %}" class="nav-link p-0 links-footer">ÁREA
+                            DE
+                            ATUAÇÃO</a>
+                    </li>
+                    <li class="nav-item mb-4"><a href="{% url 'obras' %}" class="nav-link p-0 links-footer">OBRAS</a>
+                    </li>
+                    <li class="nav-item mb-4"><a href="{% url 'contato' %}" class="nav-link p-0 ">CONTATO</a></li>
+                </ul>
+            </div>
+
+            <div class="col mb-3 rodape-redes">
+                <h5 class="titulos-rodape">Redes Sociais</h5>
+                <ul class="list-unstyled d-flex lista-rede-sociais">
+                    <li class="ms-3 "><a class="link-body-emphasis links-redes-sociais" href="#"><i
+                                class="bi bi-instagram"></i></a></li>
+                    <li class="ms-3"><a class="link-body-emphasis links-redes-sociais" href="#"><i
+                                class="bi bi-facebook"></i></a></li>
+                </ul>
+            </div>
+        </footer>
+        <div class="container">
+            <div class=" d-flex flex-column align-items-center py-4 border-top ">
+                <div>
+                    <p class="paragrafo-direitos-autorais">&copy; 2024 Construtora RFV, All rights reserved.</p>
+                </div>
+                <div>
+                    <p class="paragrafo-direitos-autorais">Desenvolvido por Livre Comércio BR</p>
+                </div>
             </div>
         </div>
-    </footer>
+    </div>
 
     <!-- Seção redes sociais -->
     <div class="services-area pt-0">
@@ -152,20 +138,7 @@
                 <div class="col-md-4 service-box pt-0">
                     <div class="redes-sociais-1">
                         <a class="nav-link" href="https://wa.me/5519987203059" id="contato-menu-whats"><img
-                                src="{% static 'img/redes_sociais/WhatsApp_lateral.png' %}"></img></a>
-                    </div>
-                </div>
-                <div class="col-md-4 service-box pt-0">
-                    <div class="redes-sociais-2">
-                        <a class="nav-link" href="#" id="contato-menu-insta"><img
-                                src="{% static 'img/redes_sociais/Instagram250.png' %}"></img></a>
-                    </div>
-                </div>
-
-                <div class="col-md-4 service-box pt-0">
-                    <div class="redes-sociais-3">
-                        <a class="nav-link contato-menus" href="#" id="contato-menu-linkd"><img
-                                src="{% static 'img/redes_sociais/Linkedin_sf.png' %}"></img></a>
+                                src="{% static 'img/redes_sociais/whats-flutuante.png' %}"></img></a>
                     </div>
                 </div>
 

@@ -14,17 +14,15 @@
 
 {% block body %}
 <main>
-    <div class="container">
-        <hr class="featurette-divider">
-
+    <div class="container container-pagina-atuacao">
         <div class="row featurette">
             {% for area in areas %}
-            <div class="col-md-7">
-                <h2 class="featurette-heading fw-normal lh-1">{{area.titulo}}</h2>
+            <div class="col-md-6 col-img-txt-atuacao">
+                <h2 class="featurette-heading lh-1 titulo-pagina-atuacao">{{area.titulo}}</h2>
                 <p>{{area.descricao}}</p>
                 <a href="{% url 'areas_atuacao' %}" class="btn btn-outline-danger btn-lg px-3">Voltar</a>
             </div>
-            <div class="col-md-5">
+            <div class="col-md-6 col-img-txt-atuacao">
                 <img src="{{area.imagem.url}}" alt="construcao_civil" width="500px" height="500px" class="img-fluid"
                     loading="lazy">
             </div>

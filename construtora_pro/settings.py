@@ -2,15 +2,10 @@ from pathlib import Path
 import os
 from django.contrib import messages
 from django.contrib.messages import constants
-# from decouple import config
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
-
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-#avz$#!zrjd_j-hn@eqb-9x74b=csi8l7k5g+nbpxx5w8mr$bq'
@@ -18,7 +13,15 @@ SECRET_KEY = 'django-insecure-#avz$#!zrjd_j-hn@eqb-9x74b=csi8l7k5g+nbpxx5w8mr$bq
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+
+if DEBUG == True:
+
+    ALLOWED_HOSTS = []
+
+else:
+
+    ALLOWED_HOSTS = ["127.0.0.1:8000", "127.0.0.1" "localhost", "construtorarfv.com.livrecomerciobrasil.com",
+                     "www.construtorarfv.com.livrecomerciobrasil.com", "www.construtorarfv.com.br"]
 
 
 # Application definition
@@ -109,11 +112,11 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
-STATIC_URL = '/static/'
-STATICFILES_DIRS = (os.path.join(BASE_DIR, 'templates/static'),)
+STATIC_URL = 'static/'
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'templates/static'), ]
 STATIC_ROOT = os.path.join('static')
 
-MEDIA_URL = '/media/'
+MEDIA_URL = 'media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # Default primary key field type
@@ -125,16 +128,18 @@ AUTH_USER_MODEL = "consultora_app.Usuario"
 
 EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
 
-# DEFAULT_FROM_EMAIL = config("DEFAULT_FROM_EMAIL")
-# EMAIL_HOST = config("EMAIL_HOST")
-# EMAIL_PORT = config("EMAIL_PORT")
-# EMAIL_HOST_USER = config("EMAIL_HOST_USER")
-# EMAIL_HOST_PASSWORD = config("EMAIL_HOST_PASSWORD")
-# EMAIL_USE_TLS = config("EMAIL_USE_TLS")
-
-DEFAULT_FROM_EMAIL = "enginner3059@gmail.com"
-EMAIL_HOST = "smtp.gmail.com"
-EMAIL_PORT = 587
-EMAIL_HOST_USER = "enginner3059@gmail.com"
-EMAIL_HOST_PASSWORD = "xjka wktz uxfd zcyt"
+DEFAULT_FROM_EMAIL = "ronaldo@rfvconstrutora.com.livrecomerciobrasil.com"
+EMAIL_HOST = "smtp.a2hosting.com"
+EMAIL_PORT = 465
+EMAIL_HOST_USER = "ronaldo@rfvconstrutora.com.livrecomerciobrasil.com"
+EMAIL_HOST_PASSWORD = "Rv6041802009*"
 EMAIL_USE_TLS = True
+
+
+MESSAGE_TAGS = {
+    constants.DEBUG: 'alert-primary',
+    constants.ERROR: 'alert-danger',
+    constants.SUCCESS: 'alert-success',
+    constants.INFO: 'alert-info',
+    constants.WARNING: 'alert-warning',
+}

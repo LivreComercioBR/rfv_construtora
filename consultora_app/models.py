@@ -38,6 +38,9 @@ class Obra(models.Model):
     detalhes = models.TextField(max_length=2000, blank=True, null=True)
     imagens = models.ManyToManyField(
         Foto, related_name="foto_obra", blank=True)
+    thumb_video = models.ImageField(
+        upload_to='thumb_video', blank=True, null=True)
+    link = models.URLField(blank=True, null=True)
 
     def __str__(self) -> str:
         return self.nome_da_obra
@@ -68,3 +71,10 @@ class Team(models.Model):
 
     def __str__(self) -> str:
         return self.nome
+
+
+class Logomarca(models.Model):
+    img = models.ImageField(upload_to="logomarca")
+
+    def __str__(self) -> str:
+        return self.img.url

@@ -1,12 +1,16 @@
 /* Estilos gerais */
 
-html {
+html, body {
     font-size: 62.5%;
+    font-family: 'Montserrat', 'sans-serif';
+    width: 100%;
+    overflow-x: hidden;
 }
 
-body {
-    font-family: 'Roboto', 'sans-serif';
-}
+
+/* .container {
+    padding-left: calc(var(--bs-gutter-x) * .2);
+} */
 
 * {
     margin: 0;
@@ -16,6 +20,11 @@ body {
 
 .row {
     margin: 0;
+}
+
+.container-fluid {
+    display: block;
+    max-width: 100vw;
 }
 
 /* .container {
@@ -31,84 +40,187 @@ p, li {
 
 /* Barra de navegação */
 
-.header, .navbar {
-    background-color: #fff;
+nav {
+    border: #ED6D0E;
+    border-bottom: .1px solid #ED6D0E;
+    background-color: rgb(0, 0, 0, 0.45);
+        
 }
 
-.navbar-toggler-icon {
-    background-color: #5eb299 !important;
+.navbar {
+    /* background-color: #000000;  */
+    backdrop-filter: blur(20px);
+    padding-bottom: 3rem;
+        
 }
 
-
-#nav_container {
-    padding-top: 0;
-    padding-bottom: 0;
+.img-favicon {
+    width: 20%;
 }
 
 #logo {
-    width: 75px;
+    height: 15%;
+    width: 15%;
 }
 
-.navbar-brand {
-    padding: 0;
-    color: #fff;
-}
 
-/* #acionador span {
-    color: #5eb299;
+
+/* .border-bottom {
+    color: #ED6D0E, 2rem, solid !important;
 } */
 
+.navbar-collapse {
+    margin-top: -3rem;
+    /* padding-bottom: 2rem; */
+}
+
+
+.navbar-toggler-icon {
+    background-color: #ED6D0E !important;
+    
+}
+
+
+#nav_container::after {
+    /* padding-top: 0; */
+    border: #ED6D0E, 10px, solid !important; 
+    
+}
+
+
+/* .navbar-brand img {
+    align-self: baseline;
+    
+} */
+
+
 .navbar-brand:hover {
-    color: #5eb299;
+    color: #F9F9F9;
+
 }
 
 .nav-link {
-    color: #545454;
+    font-family: "Montserrat";
+    font-size: 20px;
+    line-height: 26px;
+    color: #F9F9F9;
+    /* padding-top: 4.5rem; */
+
 }
 
 .nav-link:hover {
-    color: #5eb299;
-    
+    color: #ED6D0E;
+    font-weight: 700;
+   
 }
 
 #home-menu {
     transform: 1.5%;
-    color: rgb(247, 44, 44);
+    
 }
 
-.navbar-expand-lg, .navbar-nav, .nav-link {
-    padding: 1rem .8rem;
+.nav-item {
+    /* padding-top: 4.5; */
+    padding-bottom: 1rem;
+}
+
+.navbar-expand-lg  {
+    /* padding: 1rem .7rem; */
+    padding-left: 5rem;
+    padding-right: 5rem;
+}
+
+#navbarSupportedContent {
+    gap: 3rem;
+    
 }
 
 .nav-link {
     font-size: 1.6rem;
 }
 
-/* .navbar-projetos {
-    margin-left: 2rem;
-} */
+/* PRIMEIRA SEÇÃO DO SITE */
 
+/* #ContainerGeral { */
+    /* margin-left: 5rem; */
+    /* margin-right: 10rem; */
+/* } */
 
-/* Carrousel */
-
-/* #MainSlide, .carousel-inner, .carousel-item {
-    width: 100vh;
-} */
-
-#MainSlide, .carousel-caption {
-    top: 50%;
+.banner-principal {
+    background-image: url("/static/img/home/banner_principal.png");
+    height: 100vh; 
+    max-width: 100vw;
+    background-position-x: 50%;
+    background-size: cover;
+    position: relative;
+    border-bottom: 1.5rem solid #ED6D0E;
+    margin-left: -.2rem;
 }
 
-#MainSlide, .carousel-caption h2 {
+.div-banner-central button {
+    background-color: #ED6D0E;
+    color: #F9F9F9;
+    padding: .8rem;
+}
+
+.div-banner-central {
+    padding-top: 25%;
+    text-align: center;
+    justify-content: center;
+    /* position: relative; */
+  
+}
+
+.botao-pagina-contato {
+    background-color: #ED6D0E;
+    font-size: 16px;
+    color: #F9F9F9;
+    padding: .8rem;
+    border: none;
+}
+
+.botao-area-atuacao {
+    background-color: #ED6D0E;
+    color: #F9F9F9;
+    padding: .8rem;
+    border: none;
+}
+
+.botao-area-atuacao a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #F9F9F9;
+}
+
+.botao-obras {
+    border: none;
+}
+
+.botao-conheca-obras {
+    text-decoration: none;
+    color: #F9F9F9;
+    font-weight: 800;
+}
+
+.paragrafo-banner-central {
+    color: #F9F9F9;
+    font-size: 19px;
+}
+
+
+.titulo22anos {
     font-size: 50px;
-    margin-bottom: 15px;
+    color: #f9f9f9;
+    justify-content: center;
 }
 
-#MainSlide, .carousel-caption p {
-    font-size: 22px;
-    font-weight: 300;
-    margin-bottom: 0px;
-    
+
+.divisao-centro {
+    font-size: 32px;
+    color: #ED6D0E;
+    font-weight: 900;
+    text-align: center;
+    padding-top: 1rem;
 }
 
 #main-btn {
@@ -129,22 +241,157 @@ p, li {
     border-color: brown;
 }
 
-.carousel-indicators .active {
-    background-color: brown;
+.linha-central-top {
+    margin-left: -1rem;
+    background-color: #ED6D0E;
+    margin-top: 5.8rem;
+    font-weight: 700;
+    z-index: 999;
+    border: #ED6D0E, 10px, solid;
+    width: 100vw;
+    /* margin-left: 0; */
+    margin-right: 0;
+
 }
 
-/* #size-carousel {
-    
-    max-height: 100vh;
-} */
+/* Seção Destaques */
+.section-container-destatques {
+    border-bottom: #D9D9D9 1px solid;
+    padding-bottom: 6rem;
+}
 
-/* Sobre a empresa */
+.secao-destaques {
+    margin-top: 10rem;
+    height: 80%;
+    /* gap: 2rem; */
+    /* padding-top: 50rem; */
+}
+
+.div-destaques {
+    width: 70%;
+    margin-left: .6rem;
+    margin-right: 1.25rem;
+}
+
+.div-destaques2 {
+    width: 70%;
+    margin-left: .6rem;
+    margin-right: 1.25rem;
+}
+
+
+.paragrafo-amarelo-destaques {
+    /* margin-top: 1.3rem; */
+    width: 2.8rem;
+    height: .4rem;
+    background-color: #ED6D0E;
+    text-align: end;
+    margin-top: 1.6rem;
+    margin-right: 1rem;
+}
+
+.paragrafo-amarelo-destaques0 {
+    /* margin-top: 1.3rem; */
+    width: 2.8rem;
+    height: .4rem;
+    background-color: #ED6D0E;
+    text-align: end;
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+}
+
+.img-destaques {
+    width: 85%;
+    padding-top: 2rem;
+}
+
+.div-texto-destaques {
+    align-items: center;
+    margin-top: 2rem;
+    /* margin-left: 3rem; */
+}
+
+.traco-destaques {
+    color: #ED6D0E;
+    font-size: 4rem;
+}
+
 
 /* Áreas de Atuação */
-.img-atuacao {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+
+.container-pagina-atuacao {
+    padding-top: 12rem;
 }
+
+.section-area-atuacao {
+    max-height: 100%;
+}
+
+.row-area-atuacao {
+    margin-top: 5rem;
+    padding-top: 10rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+        
+}
+
+.img-areas-atuacao img {
+    width: 100%;
+    height: 90%;
+}  
+
+/* .row-atuacao {
+    height: 90vh;
+} */
+
+.section-container-atuacao {
+    border-bottom: #D9D9D9 1px solid;
+    padding-bottom: 7rem;
+    height: 100vh;
+    
+}
+
+.div-texto-atuacao {
+    align-items: center;
+    margin-top: 2rem;
+    margin-left: 5rem;
+}
+
+.titulo-atuacao {
+    font-size: 3.9rem;
+    font-weight: 400;
+}
+
+
+.h6-expertise {
+    font-size: 2rem;
+    font-weight: 400;
+    padding-bottom: 5rem;
+}
+
+.div-atuacao {
+    margin-left: 7.4rem;
+    margin-right: 21rem;
+}
+
+/* #container-area {
+    margin-right: 10rem;
+    padding-right: 10rem;
+} */
+
+.row-atuacao {
+    margin-right: 15rem;
+    
+}
+
+.owl-prev {
+    margin-right: 1rem;
+}
+
+.owl-next {
+    margin-left: 1rem;
+}
+
 
 #about-area {
     background-color: #f9f9f9;
@@ -173,19 +420,168 @@ p, li {
     font-weight: bold;
 }
 
-/* .outros-diferenciais::before {
-    font-size: 37px;
-    color: violet;
+.item {
+    border-radius: 2%;
+}
+
+.img-atuacao img {
+    border-radius: 2%;
+}
+
+/* .item img {
+    border-radius: 2%;
 } */
 
-@media screen and (max-width: 760px){
+
+/* Seção Obras */
+
+.section-container-obras {
+    border-bottom: #D9D9D9 1px solid;
+    padding-bottom: 3rem;
+}
+
+.secao-obra {
+    padding-top: 2rem;
+}
+
+.container-obra {
+    margin-top: 5rem;
+    padding-top: 5rem;
+
+}
+
+.col-botao-obra {
+    margin-left: -2.2rem;
+}
+
+.row-obras {
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+}
+
+.div-texto-obras {
+    margin-top: 2rem;
+}
+
+.img-tit-obras-realizadas {
+    width: 85%;
+}
+
+.div-obras {
+    margin-bottom: 3.5rem;
+}
+
+.div-logoempresa-obras {
+    text-align: end;
+}
+
+.div-logoempresa-obras img {
+    width: 40%;
+    
+}
+
+
+
+.div-endereco {
+    width: 100%;
+    margin-left: 7rem;
+}
+
+.div-titulo-atuacao {
+    width: 100%;
+}
+
+.div-titulo-destaques {
+    width: 100%;
+}
+
+.div-titulo-clientes {
+    width: 100%;
+    margin-left: 7rem;
+}
+
+/* .title-clientes {
+    margin-left: 7rem;
+} */
+
+.div-titulo-contato {
+    font-size: 1.3rem;
+}
+
+
+.div-obras-et-logo {
+    width: 50%;
+}
+
+
+
+.titles-homepage {
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+
+
+.title-obras-finalizadas {
+    font-weight: 600;
+    font-size: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+
+.img-obras-home {
+    width: 100%; 
+    height: 90%;
+}
+
+/* SEÇÃO CLIENTES */
+.nomes-clientes {
+    padding-bottom: 4rem;
+}
+
+
+.owl-carousel .owl-nav button.owl-next,.owl-carousel .owl-nav button.owl-prev,.owl-carousel button.owl-dot {
+    background: 0 0;
+    color: #ED6D0E;
+        
+}
+
+.owl-carousel .owl-nav button.owl-next,.owl-carousel .owl-nav button.owl-prev {
+    border-radius: 50%;
+    border: 1px solid;
+    padding: 1rem !important;
+    font: inherit;
+    font-size: 30px;
+    gap: 2rem;
+    align-content: end;
+
+}
+
+.owl-nav {
+    margin-left: 60rem;
+    gap: 2rem;
+    margin-top: 2rem;
+    
+}
+.owl-nav span {
+    display: flex;
+    gap: 6rem;
+    
+    
+}
+
+
+
+
+/* @media screen and (max-width: 760px){
     #about-area {
         img{
             width: 250px;
     };
     
     }
-}
+} */
 
 
 #about-list {
@@ -233,7 +629,7 @@ p, li {
     color: #5eb299;
 }
 
-@media screen and (max-width: 36em) {
+/* @media screen and (max-width: 36em) {
     #container-area {
         justify-content: center;
       img {
@@ -246,7 +642,7 @@ p, li {
         justify-content: center;
       }
     }
-  }
+  } */
 
 
 .marketing .col-lg-4 {
@@ -313,11 +709,36 @@ p, li {
     }
 }
 
+/* Seção Projetos */
 
-/* Seção Obras */
+/* .projetos-area {
+    margin-top: 5rem;
+} */
 
-.secao-obras {
-    padding-top: 7rem;
+.logo-empresa {
+    margin-left: 40rem;
+}
+
+.div-botao-obras {
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.botao-ver-mais {
+    background-color: #ED6D0E;
+    color: #F9F9F9;
+    width: 13rem;
+    text-align: center;
+    justify-content: center;
+    justify-items: center;
+    border: none;
+    
+}
+.botao-ver-mais a {
+    color: #F9F9F9;
+    text-decoration: none;
+    font-size: 28px;
 }
 
 .projetos {
@@ -358,7 +779,224 @@ p, li {
     padding: 15px;
 }
 
+/* Seção Clientes */
+.clientes-area {
+    padding-top: 8rem;
+}
+
+.div-clientes {
+    justify-content: center;
+    align-items: center;
+    margin-left: 20rem;
+}
+
+.img-clientes {
+    width: 60%;
+    height: 70%;
+    
+}
+
+.img-nomes-clientes {
+    width: 80%;
+    height: 90%;
+}
+
+/* SEÇÃO CONTATO HOMEPAGE */
+.section-localizacao {
+    height: 100vh;
+    
+}
+
 /* Seção contatos */
+
+.secao-contato {
+    height: 100vh;
+}
+
+.title-contato {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #F9F9F9;
+}
+
+
+.paragrafo-amarelo-contato {
+    margin-top: 2rem;
+    width: 2.8rem;
+    height: .3rem;
+    background-color: #ED6D0E;
+    text-align: end;
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+}
+
+
+.contato {
+    background-image: url("/static/img/home/imagemContato.png");
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+
+.gradiente {
+    background-image: url("/static/img/home/FormContato.png");
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.traco-contato {
+    /* padding-left: 10rem; */
+    color: #ED6D0E;
+    font-size: 4rem;
+}
+
+
+.div-text-contact {
+    padding-bottom: 15rem;
+    padding-right: 1.5rem;
+}
+
+.div-contato1 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.div-form-contato {
+    padding-bottom: 10rem;
+    background-color: #cdc2bc;
+    border-radius: 2%;
+    border: #ED6D0E, 1px, solid;
+   padding-left: 1.5rem;
+}
+
+.titulo-contato {
+    color: white;
+    font-size: 4rem;
+    font-weight: 900;
+}
+
+.paragrafo-contato {
+    padding-top: 1.5rem;
+    color: white;
+    font-size: 1.8rem;
+    padding-left: 1rem;
+    margin-right: 2rem;
+    
+}
+
+.linha-central-contato {
+    /* padding-left: 10rem; */
+    padding-right: 5rem;
+    background-color: #ED6D0E;
+    color: #ED6D0E;
+    font-weight: 700;
+    border: #ED6D0E, 1px, solid;
+    margin-left: 10rem;
+    
+
+}
+
+.col-redes-sociais {
+    
+    gap: 1rem;
+}
+
+.div-redes-sociais-contato {
+    padding-left: 3rem; 
+    
+}
+
+.rede-sociais {
+    border: #ED6D0E 1px solid;
+    width: 13rem;
+    padding: .1rem;
+    color: white;
+    column-gap: 1rem;
+}
+
+.rede-sociais i {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bolder;
+}
+
+.rede-sociais a {
+    text-decoration: none;
+}
+
+/* Formulário Contato Homepage */
+
+.botao-form-contato {
+    background-color: #ED6D0E;
+    color: #F9F9F9;
+    font-size: 2rem;
+    width: 16rem;
+}
+
+.botao-form-contato:hover {
+    color: #F9F9F9;
+    background-color: #5eb299;
+}
+
+.text-form-botao-contato {
+    font-size: 1.8rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+
+}
+
+.div-label-form-contact {
+    width: 13rem;
+    /* font-weight: 900; */
+    
+}
+/* .text-form-botao-contato {
+    font-size: 1rem;
+    padding-bottom: .8rem;
+} */
+
+
+/* Seção Localização */
+
+.container-localizacao {
+    padding-top: 7rem;
+}
+
+.nosso-endereco {
+    width: 40rem;
+    /* padding-left: 30rem; */
+    margin-left: 33rem;
+}
+
+/* .div-iframe-home {
+    width: 90%;
+    margin-left: 10rem;
+    
+} */
+
+#div-iframe-endereco {
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-content: center;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    padding-bottom: 5rem;
+    margin-left: 1rem;
+}
 
 .secao-contatos {
     width: 50%;
@@ -371,6 +1009,10 @@ p, li {
     height: 600%;
     display: flex;
     align-self: center;
+}
+
+#promptsite {
+    font-size: 24px;
 }
 
 /* Seção clientes */
@@ -386,8 +1028,12 @@ p, li {
 /* Página home */
 
 .container-carousel {
-    height: 100vh;
-    max-width: 100vw;
+    height: 100%;
+    max-width: 100%;
+}
+
+#imgCarrousel {
+    columns: col-sm-3;
 }
 
 
@@ -408,16 +1054,78 @@ p, li {
     color: #000;
 }
 
-/* .email-construtoral {
-    text-transform: ;
-} */
 
 /* Footer */
 
-footer{
-    color:#545454 !important;
-    /* margin-left: 50px; */
-    justify-content: center;
+.div-logo-footer {
+    padding-top: 2rem;
+}
+
+.div-logo-footer img {
+    width: 50%;
+}
+
+ .container-rodape {
+    background-color: #000000;
+    padding-left: 10rem;
+    padding-right: 10rem;
+ }
+
+ .container-rodape footer {
+    margin-left: 10rem;
+    margin-right: 10rem;
+ }
+
+ .titulos-rodape {
+    color: #ED6D0E;
+    font-size: 2rem;
+    padding-top: 2rem;
+ }
+
+ .ul-links-footer {
+    padding-top: 2rem;
+ }
+
+ .paragrafo-rodape {
+    color: #F9F9F9;
+    padding-top: 2rem;
+ }
+
+ .paragrafo-direitos-autorais {
+    color: #F9F9F9;
+    padding-top: 2rem;
+ }
+ 
+ .links-rodape:hover{
+    color: #ED6D0E !important;
+ }
+
+ .lista-rede-sociais {
+    gap: 2rem;
+    padding-top: 1rem;
+ }
+
+ .links-redes-sociais {
+    color: #F9F9F9 !important;
+    font-size: 2rem;
+    
+
+ }
+
+ .links-redes-sociais:hover {
+    color: #ED6D0E !important;
+ }
+
+ /* .linha-rodape {
+    margin-left: 10rem;
+    margin-right: 10rem;
+ } */
+
+ .direitos-autorais {
+    width: 100vw;
+    margin-left: 10rem;
+    margin-right: 10rem;
+
  }
 
  .rodape {
@@ -434,20 +1142,7 @@ footer{
     margin-left: 0px;
  } */
 
- footer li{
-    margin-top: 20px ;
-    margin-bottom: 20px ;
-    color: #545454;
-}
-
-footer a{
-    color: #545454;
-    text-decoration: none;
-}
-
-footer li:hover {
-    color: #5eb299;
-}
+ 
   
 .text-light {
     color: #545454;
@@ -490,18 +1185,18 @@ footer li:hover {
 .linkedin {
     padding-right: 0.2rem;
 }
-
+/* 
 @media screen and (max-width: 600px) {
     footer {
       margin-left: 0; 
       };
       .row, row-1, row-2 {
         margin-left: 0;
-        /* padding-left: 3rem; */
+        padding-left: 3rem;
       }
       
     }
- 
+  */
 
 .div-institucional {
     text-align: left;
@@ -584,13 +1279,16 @@ width: 60%;
     
 }
 
-@media (max-width: 600px) {
+/* Icone WhatsApp */
+
+@media (max-width: 30rem) {
     #contato-menu-whats,
     #contato-menu-insta,
     #contato-menu-linkd {
         img {
             width: 40%;
-            right: 1rem;
+            right: -3rem;
+            bottom: 5rem;
             position: relative;
             z-index: 999 !important;
         }
@@ -598,9 +1296,36 @@ width: 60%;
         
 }
 
-/* Página do projeto */
+@media (max-width: 30rem) {
+    #contato-menu-whats-p,
+    #contato-menu-insta-p,
+    #contato-menu-linkd-p {
+        img {
+            width: 40%;
+            right: 1.7rem;
+            position: relative;
+            z-index: 999 !important;
+        }
+    }
+        
+}
+ /* --------------------------------- */
+ @media (max-width: 36rem) {
+    #contato-menu-whats,
+    #contato-menu-insta,
+    #contato-menu-linkd {
+        img {
+            width: 40%;
+            right: 1rem;
+            bottom: 5rem;
+            position: relative;
+            z-index: 999 !important;
+        }
+    }
+        
+}
 
-@media (max-width: 600px) {
+@media (max-width: 36rem) {
     #contato-menu-whats-p,
     #contato-menu-insta-p,
     #contato-menu-linkd-p {
@@ -614,4 +1339,1964 @@ width: 60%;
         
 }
 
+/* --------------------------------- */
+@media (max-width: 48rem) {
+    #contato-menu-whats,
+    #contato-menu-insta,
+    #contato-menu-linkd {
+        img {
+            width: 40%;
+            right: 3rem;
+            bottom: 5rem;
+            position: relative;
+            z-index: 999 !important;
+        }
+    }
+        
+}
+
+@media (max-width: 48rem) {
+    #contato-menu-whats-p,
+    #contato-menu-insta-p,
+    #contato-menu-linkd-p {
+        img {
+            width: 40%;
+            right: 1.7rem;
+            position: relative;
+            z-index: 999 !important;
+        }
+    }
+        
+}
+
+/* --------------------------------- */
+@media (max-width: 62rem) {
+    #contato-menu-whats,
+    #contato-menu-insta,
+    #contato-menu-linkd {
+        img {
+            width: 40%;
+            right: 3rem;
+            bottom: 5rem;
+            position: relative;
+            z-index: 999 !important;
+        }
+    }
+        
+}
+
+@media (max-width: 62rem) {
+    #contato-menu-whats-p,
+    #contato-menu-insta-p,
+    #contato-menu-linkd-p {
+        img {
+            width: 40%;
+            right: 1.7rem;
+            position: relative;
+            z-index: 999 !important;
+        }
+    }
+        
+}
+
+/* --------------------------------- */
+@media (max-width: 75rem) {
+    #contato-menu-whats,
+    #contato-menu-insta,
+    #contato-menu-linkd {
+        img {
+            width: 40%;
+            right: -3rem;
+            bottom: 5rem;
+            position: relative;
+            z-index: 999 !important;
+        }
+    }
+        
+}
+
+@media (max-width: 75rem) {
+    #contato-menu-whats-p,
+    #contato-menu-insta-p,
+    #contato-menu-linkd-p {
+        img {
+            width: 40%;
+            right: 1.7rem;
+            position: relative;
+            z-index: 999 !important;
+        }
+    }
+        
+}
+
+
+/* ---------------------------------------------------------------------- */
+
+/* Novas Configurações do site */
+
+@media (max-width: 23.438rem) {
+    .titles-homepage {
+        font-size: 1.2rem;
+    }
+}
+
+/* Seção HEADER */
+@media (max-width: 30rem) {
+    .navbar {
+        display: flex;
+        color: #ED6D0E;
+        padding-top: 2rem;
+    }
+    #logo {
+        width: 30%;
+    }
+    .div-logo-menu {
+        width: 50%;
+    }
+    .navbar-toggler {
+        color: #F9F9F9;
+        margin-top: 1rem;
+    }
+    .navbar-toggler-icon {
+        color: #ED6D0E;
+    }
+    .navbar-collapse {
+        margin-top: 7rem;
+        font-size: 10px !important;
+    }
+    .nav-link {
+        font-size: 1rem;
+        line-height: 1.25rem;
+    }
+}
+
+/* Seção BANNER PRINCIPAL */
+
+@media (max-width: 30rem) {
+    
+    .div-banner-central {
+        /* margin-top: 7.5rem; */
+        /* position: relative; */
+        padding-top: 40rem;
+        width: 100vw;
+    }
+    .linha-central-top {
+        margin-left: 0rem;
+    }
+    .titulo22anos {
+        font-size: 2rem;
+    }
+    .paragrafo-banner-central {
+        font-size: 1.2rem;
+        padding-left: 3rem;
+        padding-right: 5rem;
+    }
+    .botao-obras {
+        padding-bottom: .8rem;
+    }
+    .botao-conheca-obras {
+        font-size: 1rem;
+        padding-top: 0;
+        padding-bottom: .8rem;
+    }
+}
+
+
+/* SEÇÃO DESTAQUES */
+/* -------------------------------------------------- */
+@media (max-width: 30rem) {
+    .secao-destaques {
+        margin-top: 2rem;
+    }
+    .titles-homepage {
+        font-size: 1.3rem;
+        font-weight: 700;
+    }
+    
+    .titulo-destaques {
+        font-size: 2rem;
+        margin-left: 3rem;
+    }
+    .img-titulo-destatques {
+        width: 70%;
+    }
+    .img-destaques {
+        width: 100%;
+    }
+    .div-destaques {
+        margin-bottom: 2rem;
+        width: 97%;
+    }
+    .div-destaques2 {
+        width: 97%;
+    }
+}
+
+
+/* ÁREA DE ATUAÇÃO */
+@media (max-width: 30rem) {
+    .owl-carousel {
+        margin-left: 0rem;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .section-container-atuacao {
+        padding-bottom: 8rem;
+    }
+    .row-atuacao {
+        margin-right: 0;
+        padding-right: 0;
+        margin-bottom: 8rem;
+    }
+    .div-area-atuacao {
+        margin-left: 1rem;
+    }
+    .item-atuacao {
+        margin-left: -2rem;
+    }
+    .titulo-pagina-atuacao {
+        font-size: 2rem;
+        font-weight: 600;
+        padding-bottom: 2rem;
+    }
+    .col-img-txt-atuacao {
+        padding-bottom: 3rem;
+    }
+    .img-area-atuacao {
+        border-radius: 5%;
+    }
+    .h6-expertise {
+        font-size: 1.2rem;
+        padding-right: 2.5rem !important;
+        margin-left: 1rem;
+        padding-bottom: 2rem;
+
+    }
+    .div-atuacao {
+        margin-left: 2rem;
+        margin-top: 0rem;
+        margin-bottom: 5rem;
+    }
+    .owl-nav {
+        margin-left: 18rem;
+        gap: 2rem;
+        margin-top: 2rem;
+        
+    }
+    button.owl-prev {
+        font-size: 10px;
+    }
+    
+    button.owl-next {
+        margin-left: 10px;
+    }
+    .owl-nav span {
+        display: flex;
+        gap: 5rem;
+    }
+}
+
+/* SEÇÃO OBRAS REALIZADAS */
+/* ------------------------------------------- */
+@media (max-width: 30rem) {
+    .section-container-obras {
+        padding-bottom: 6rem;
+    }
+    .row-obras {
+        padding-bottom: 0rem;
+    }
+    .img-tit-obras-realizadas {
+        width: 30rem;
+        padding-top: .9rem;
+    }
+    .div-logoempresa-obras {
+        text-align: end;
+    }
+    .div-logoempresa-obras img {
+        width: 40%;
+        margin-top: -1rem;
+    }
+    .div-obras {
+        margin-bottom: 1rem;
+    }
+    .div-obras-home {
+        width: 50% !important;
+        padding-bottom: 1.3rem;
+    }
+    .botao-ver-mais {
+        padding-top: .2rem !important;
+        padding-bottom: .2rem !important;
+    }
+    .botao-ver-mais a {
+        font-size: 14px;
+    }
+}
+
+/* SEÇÃO CLIENTES */
+/* ---------------------------------------- */
+@media (max-width: 30rem) {
+    .clientes-area {
+        padding-top: 3rem;
+    }
+    .div-clientes {
+        margin-left: 5rem;
+    }
+    .paragrafo-amarelo-clientes {
+        display: none;
+    }
+}
+
+/* SEÇÃO CONTATO */
+/* -------------------------------------------- */
+@media (max-width: 30rem) {
+    .div-contato {
+        margin-top: 7rem;
+    }
+    .div-contato1 {
+        margin-top: 3rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        width: 97%;
+        margin-left: 1rem;
+    }
+    .titulo-contato {
+        font-size: 3rem;
+        padding-top: 2rem;
+    }
+    /* .div-texto-contato {
+        padding-top: 3rem;
+    } */
+    .paragrafo-contato {
+        font-size: 1.1rem;
+    }
+    /* .traco-contato,
+    .paragrafo-contato, */
+    .div-redes-sociais-contato {
+        padding-left: 1rem;
+    }
+    .div-text-contact {
+        padding-bottom: 10rem;
+        padding-right: 1rem;
+        /* width: 95%; */
+        
+    }
+    .linha-central-contato {
+        margin-left: 0;
+    }
+    .redes-sociais {
+        border: none;
+        color: white;
+        
+    }
+    .redes-sociais i {
+        border: none;
+        text-align: center;
+        justify-content: center;
+        color: white;
+    }
+    .div-form-contato {
+        /* width: 90% !important; */
+        /* margin-left: 1rem; */
+        /* margin-right: 1rem; */
+        padding-left: 1rem;
+        /* padding-right: 1rem; */
+    }
+    .div-label-form-contact {
+        width: 6.5rem !important;
+    }
+    .text-form-botao-contato {
+        font-size: 1rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-bottom: 1.5rem;
+    }
+    .text-redes-sociais {
+        color: white;
+    }
+   
+}
+
+/* SEÇÃO LOCALIZAÇÃO */
+
+@media (max-width: 30rem) {
+    .section-localizacao {
+        margin-bottom: 0rem;
+    }
+    .container-localizacao {
+        padding-top: 5rem;
+    }
+    .nosso-endereco {
+        width: 28rem;
+        margin-left: 3rem;
+    }
+    .div-iframe-home{
+        width: 100%;
+        margin-left: 1rem;
+    }
+    #div-iframe-endereco {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+/* Subseção FOOTER */
+
+@media (max-width: 30rem) {
+    .container-rodape footer {
+        margin-left: 3rem;
+    }
+    .paragrafo-rodape {
+        padding-right: 3rem !important;
+    }
+    
+}
+
+/* ------------------------------------------------ */
+/* Subseção Header max-width 575.98px */
+@media (min-width: 36rem) {
+    .navbar {
+        padding-top: 2rem;
+        display: flex;
+        color: #ED6D0E;
+    }
+    #logo {
+        height: 25%;
+        width: 30%;
+    }
+    .navbar-brand a {
+        padding-top: 2rem;
+    }
+    .navbar-toggler {
+        margin-left: 35rem !important;
+        color: #f9f9f9;
+        margin-top: -2.5rem;
+        
+    }
+    .navbar-toggler-icon {
+        color: #ED6D0E;
+    }
+    .navbar-collapse {
+        margin-top: 5rem;
+        font-size: 12px !important;
+    }
+    .nav-link {
+        font-size: 1rem;
+        line-height: 1.25rem;
+    }
+    .div-banner-central {
+        /* margin-top: 7.5rem; */
+        padding-top: 28rem;
+    }
+    .linha-central-top {
+        margin-left: 0rem;
+    }
+    .titulo22anos {
+        font-size: 3rem;
+    }
+    .paragrafo-banner-central {
+        font-size: 1.3rem;
+    }
+    .botao-obras {
+        padding-bottom: .8rem;
+    }
+    .botao-conheca-obras {
+        font-size: 1rem;
+        padding-top: 0;
+        padding-bottom: .8rem;
+    }
+}
+
+/* Subseção destaques min-width: 575.98px */
+/* ------------------------------------------------ */
+@media (min-width: 36rem) {
+    .section-container-destatques {
+        padding-bottom: 3rem;
+    }
+    .secao-destaques {
+        margin-top: 3.5rem;
+    }
+    .img-titulo-destatques {
+        margin-left: 3rem;
+        width: 85%;
+    }
+    .titles-homepage {
+        font-size: 2rem;
+    }
+    .img-destaques {
+        padding-top: 1rem;
+        width: 100%;
+    }
+    .div-destaques {
+        width: 100%;
+        margin-bottom: 3rem;
+    }
+    .div-destaques2 {
+        width: 100%;
+    }
+}
+
+/* Subseção AREAS DE ATUAÇÃO min-width: 575.98px*/
+/* ----------------------------------------------- */
+@media (min-width: 36rem) {
+    #container-area {
+        padding-top: 2rem;
+        margin-right: 10rem;
+        padding-right: 10rem;
+        margin-left: 5rem;
+    }
+    /* .container-atuacao {
+        margin-left: -2rem;
+        
+    } */
+    .item-atuacao {
+        margin-left: -2rem;
+    }
+    .secao-atuacao {
+        margin-top: 3rem;
+    }
+    .titulo-pagina-atuacao {
+        font-size: 2.2rem;
+        font-weight: 600;
+        padding-bottom: 2rem;
+    }
+    .col-img-txt-atuacao {
+        padding-bottom: 3rem;
+    }
+    .h6-expertise {
+        font-size: 1.6rem;
+        padding-bottom: 2rem;
+    }
+    .div-atuacao {
+        margin-top: 0rem;
+        margin-bottom: -10rem !important;
+    }
+    .owl-nav {
+        margin-left: 21rem;
+        gap: 2rem;
+        margin-top: 2rem;
+        
+    }
+    .owl-nav span {
+        display: flex;
+        gap: 6rem;
+    }
+    .owl-carousel {
+        margin-left: 0rem;
+    }
+}
+
+/* Subseção Obras Realizadas min-width: 575.98px */
+/* ---------------------------------------------------------- */
+@media (min-width: 36rem) {
+    .section-container-obras {
+        padding-bottom: 3rem;
+    }
+    .row-obras {
+        padding-bottom: 0;
+    }
+    .div-obras-realizadas {
+        text-align: left;
+    }
+    .div-obras-realizadas2 {
+        text-align: left;
+    }
+    .div-endereco {
+        text-align: left;
+    }
+    .div-titulo-atuacao {
+        text-align: left;
+    }
+    .projetos-area {
+        margin-top: 10rem;
+    }
+    .img-tit-obras-realizadas {
+        width: 35rem;
+        padding-top: .9rem;
+    }
+    .div-logoempresa-obras {
+        text-align: end;
+        margin-left: 8rem;
+    }
+    .div-logoempresa-obras img {
+        width: 50%;
+    }
+    .logo-empresa {
+        margin-left: 7rem;
+        width: 60px;
+        padding-top: 1.5rem;
+    }
+    .div-obras {
+        margin-bottom: 1.5rem;
+    }
+    .div-obras-home {
+        margin-top: 1rem;
+        width: 50% !important;
+        padding-bottom: 1.3rem;
+    }
+    .botao-ver-mais a {
+        width: 17rem;
+        font-size: 1rem;
+    }
+}
+
+/* Subseção Clientes min-width: 36rem */
+ /* ---------------------------------------------------- */
+ @media (min-width: 36rem) {
+    .clientes-area {
+        padding-top: 1rem;
+    }
+    .div-titulo-clientes {
+        margin-left: -2rem;
+        text-align: center;
+    }
+    .div-clientes {
+        margin-left: 5rem;
+    }
+    .img-clientes {
+        width: 75%;
+    }
+    .paragrafo-amarelo-clientes {
+        display: none;
+    }
+}
+
+/* Subseção Contatos min-width: 575.98px */
+/* ------------------------------------------------- */
+@media (min-width: 36rem) {
+    .row-contato {
+        padding-top: 2%;
+    } 
+    .div-contato {
+        padding-top: 2 !important;
+    }
+    .div-contato1 {
+        padding-top: 2rem;
+    }
+    
+    .title-contato {
+        font-size: 2.2rem;
+    }
+    .paragrafo-amarelo-contato {
+        margin-top: 1.5rem;
+        width: 2rem;
+        height: .2rem;
+    }
+    .div-text-contact {
+        padding-bottom: 10rem;
+        padding-right: 1.3rem;
+    }
+    .titulo-contato {
+        font-size: 3rem;
+    }
+    .paragrafo-contato {
+        padding-top: 1rem;
+        font-size: 1.1rem;
+    }
+    .redes {
+        padding-top: 2rem;
+    }
+    .linha-central-contato {
+        margin-left: 0;
+    }
+    .redes-sociais {
+        border: none;
+        color: white;
+        
+    }
+    .redes-sociais i {
+        border: none;
+        text-align: center;
+        justify-content: center;
+        color: white;
+    }
+    .div-label-form-contact {
+        width: 9rem;
+    }
+    .text-form-botao-contato {
+        font-size: 1rem;
+        padding-bottom: 1.5rem;
+    }
+    .text-redes-sociais {
+        color: white;
+    }
+    .botao-form-contato {
+        font-size: 1.5rem;
+        width: 12rem;
+    }
+}
+
+/* Subseção Localização min-width: 575.98px*/
+/* -------------------------------------------------- */
+@media (min-width: 36rem) {
+    .container-localizacao {
+        padding-top: 3rem;
+    }
+    .div-texto-endereco {
+        margin-left: 0rem;
+    }
+    .div-endereco {
+        margin-left: 1.5rem;
+    }
+    .nosso-endereco {
+        width: 32rem;
+        margin-left: 3rem;
+    }
+    #div-iframe-endereco {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+    .div-iframe-home {
+        width: 100%;
+        margin-left: 1.4rem;
+    }
+}
+
+/* SEção FOOTER */
+/* Max-width: 36rem */
+@media (min-width: 36rem) {
+    .container-rodape footer {
+        margin-left: 5rem;
+    }
+    .div-central-footer {
+        width: 100%;
+        margin-left: 5rem;
+        display: block !important;
+    }
+    .paragrafo-rodape {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+    .titulos-rodape {
+        padding-top: 2rem;
+    }
+    .paragrafo-direitos-autorais {
+        color: #F9F9F9;
+        padding-top: 2rem;
+    }
+    .div-logo-footer {
+        padding-top: 0;
+    }
+    .div-logo-footer img {
+        width: 30%;
+    }
+    
+}
+
+
+/* Subseção Header min-width 768px - 48rem */
+/* ------------------------------------------------ */
+@media (min-width: 48rem) {
+    .navbar {
+        padding-top: 2rem;
+        display: block;
+        color: #ED6D0E;
+        
+    }
+    #logo {
+        height: 25%;
+        width: 20%;
+    }
+    .navbar-toggler {
+        margin-left: 60rem !important;
+        color: #f9f9f9;
+    }
+    .navbar-toggler-icon {
+        color: #ED6D0E;
+        display: flex;
+        margin-top: -4rem;
+        
+    }
+    .navbar-collapse {
+        font-size: 12px !important;
+        margin-top: 5rem;
+    }
+    .div-banner-central {
+        margin-top: 1.5rem;
+        padding-top: 26rem;
+    }
+    /* .linha-central {
+        margin-left: 0rem;
+        margin-top: 23rem;
+        
+    } */
+    .linha-central-top {
+        margin-left: 0rem;
+    }
+    .titulo22anos {
+        font-size: 3rem;
+    }
+    .paragrafo-banner-central {
+        font-size: 1.3rem;
+    }
+    .botao-obras {
+        padding-bottom: .8rem;
+    }
+    .botao-conheca-obras {
+        font-size: 1rem;
+        padding-top: 0;
+        padding-bottom: .8rem;
+    }
+    
+}
+
+
+/* Subseção destaques min-width 48rem */
+/* ------------------------------------------------ */
+@media (max-width: 48rem) {
+    .paragrafo-amarelo-obras0,
+    .paragrafo-amarelo-obras, 
+    .paragrafo-amarelo-destaque0,
+    .paragrafo-amarelo-destaques,
+    .paragrafo-amarelo-contato,
+    .paragrafo-amarelo-clientes
+    .paragrafo-amarelo-institucional
+    .paragrafo-amarelo {
+        display: none;
+    }
+}
+
+
+@media (min-width: 48rem) {
+    .secao-destaques {
+        margin-top: 5rem;
+    }
+    .img-titulo-destatques {
+        margin-left: 4rem;
+        width: 65%;
+    }
+    .img-destaques {
+        margin-left: 7rem;
+        margin-right: 3rem;
+        width: 80%;
+    }
+    .div-destaques {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+    .div-destaques2 {
+        width: 81%;
+        margin-left: 8rem;
+    }
+}
+
+
+/* Subseção AREAS DE ATUAÇÃO min-width: 48 rem */
+/* ----------------------------------------------- */
+@media (min-width: 48rem) {
+    #container-area {
+        padding-top: 2rem;
+    }
+    .titles-homepage {
+        font-size: 2.5rem;
+    }
+    .secao-atuacao {
+        margin-top: 3rem;
+        padding-top: 4rem;
+    }
+    .container-pagina-atuacao {
+        padding-top: 14rem;
+    }
+    .titulo-pagina-atuacao {
+        font-size: 2.5rem;
+        font-weight: 600;
+        padding-bottom: 2rem;
+    }
+    .h6-expertise {
+        font-size: 1.6rem;
+        padding-bottom: 2rem;
+        margin-left: 1rem;
+        padding-left: 0;
+        padding-right: 5rem;
+    }
+    .div-atuacao {
+        margin-top: 0rem;
+        margin-left: 5rem;
+    }
+    .owl-nav {
+        margin-left: 58rem;
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+    .owl-nav span {
+        display: flex;
+        gap: 6rem;
+    }
+}
+
+
+/* Subseção Obras realizadas min-width: 48rem */
+/* ------------------------------------------- */
+@media (min-width: 48rem) {
+    .div-obras {
+        margin-top: 7rem;
+    }
+    .titles-homepage {
+        font-size: 2.7rem;
+    }
+    .div-texto-obras {
+        margin-left: 1.5rem;
+    }
+    .row-obras-home {
+        column-gap: 1rem;
+    }
+    .img-tit-obras-realizadas {
+        width: 42rem;
+        padding-top: .9rem;
+    }
+    .logo-empresa {
+        /* margin-left: 22rem; */
+        width: 80px;
+        padding-top: 2rem;
+    }
+    .div-logoempresa-obras {
+        text-align: end;
+        margin-left: 8rem;
+    }
+    .div-obras-home {
+        width: 48% !important;
+    }
+}
+
+/* Subseção Obras Realizadas min-width: 48rem */
+/* ---------------------------------------------------------- */
+@media (min-width: 48rem) {
+    .projetos-area {
+        margin-top: 2rem;
+    }
+    .img-tit-obras-realizadas {
+        width: 35rem;
+        padding-top: .9rem;
+    }
+    .logo-empresa {
+        margin-left: 7rem;
+        width: 60px;
+        padding-top: 1.5rem;
+    }
+    .div-obras {
+        margin-bottom: 1.5rem;
+    }
+    .botao-ver-mais a {
+        width: 17rem;
+        font-size: 1.8rem;
+    }
+}
+
+ 
+/* Subseção Clientes min-width: 48rem */
+ /* ---------------------------------------------------- */
+ @media (min-width: 48rem) {
+    .clientes-area {
+        padding-top: 3rem;
+    }
+    .div-clientes {
+        margin-left: 8.5rem;
+    }
+    .img-clientes {
+        width: 70%;
+    }
+}
+
+#textMensagemHome {
+    font-size: 1.6rem;
+    padding-top: 2.5rem;
+}
+
+/* Subseção Contatos min-width: 48rem */
+/* ------------------------------------------------- */
+@media (min-width: 48rem) {
+    .row-contato {
+        padding-top: 7%;
+    }
+    .titulo-contato {
+        font-size: 3rem;
+    }
+    .title-contato {
+        font-size: 2.7rem;
+    }
+    .paragrafo-contato {
+        padding-top: 5rem;
+        font-size: 1.2rem;
+        padding-bottom: 3rem;
+    }
+    .traco-contato,
+    .paragrafo-contato,
+    .div-redes-sociais-contato {
+        padding-left: 1rem;
+        justify-content: center;
+        column-gap: 5rem;
+    }
+    
+    .linha-central-contato {
+        margin-left: 0;
+        padding-right: 3rem !important;
+        width: 90%;
+    }
+    .redes-sociais {
+        border: none;
+        width: 6.25rem;
+        color: white;
+    }
+    .redes-sociais i {
+        border: none;
+        text-align: center;
+        justify-content: center;
+        color: white;
+    }
+    .div-redes-sociais-contato .redes-sociais {
+        display: flex;
+        color: white;
+    }
+    .text-redes-sociais {
+        color: white;
+        font-size: 1rem !important;
+    }
+    .label-form-contact {
+        font-size: 1.2rem;
+        padding: 1.5rem;
+        font-weight: 600;
+        
+    }
+    .input-form-contact {
+        font-size: 1.4rem;
+        padding: 1.5rem;
+    }
+    .label-msg {
+        font-size: 1.6rem;
+        font-weight: 700;
+    }
+    .form-floating {
+        font-size: 1.2rem;
+        font-weight: 600;
+    }
+    .text-form-botao-contato {
+        font-size: 1.8rem;
+        padding-bottom: 1.5rem;
+    }
+}
+
+/* Seção LOCALIZAÇÃO */
+/* --------------------------------------------- */
+@media (min-width: 48rem) {
+    .div-iframe-home {
+        width: 100%;
+        padding-left: 1rem;
+    }
+    .div-texto-endereco {
+        margin-left: 0rem;
+    }
+    .div-endereco {
+        margin-left: 0rem;
+    }
+    
+}
+
+/* SEção FOOTER */
+/* min-width: 48rem */
+@media (min-width: 48rem) {
+    .container-rodape footer {
+        margin-left: 0;
+    }
+     .div-logo-footer img {
+        width: 40% !important;
+     }
+    .div-central-footer {
+        width: 100%;
+        display: flex !important;
+        padding-right: 10rem;
+        padding-left: 10rem;
+    }
+    .rodape-redes {
+        padding-left: 5rem;
+    }
+    .paragrafo-rodape {
+        padding-top: 3rem;
+        padding-bottom: 4rem;
+    }
+    .titulos-rodape {
+        padding-top: 2rem;
+    }
+    .paragrafo-direitos-autorais {
+        color: #F9F9F9;
+        padding-top: 2rem;
+    }
+    .lista-rede-sociais {
+        margin-left: 0rem;
+        gap: 1rem;
+    }
+}
+
+/* --------------------------------------------------- */
+/* Seção Header max-width: 1199.98px */
+
+@media (min-width: 62rem) {
+    .navbar {
+        display: block !important;
+        /* margin-top: 0; */
+        padding-right: 10rem;
+        padding-top: 2rem;
+    }
+    #logo {
+        height: 25%;
+        width: 15%;
+    }
+    .navbar-collapse {
+        margin-top: -3rem;
+        flex-grow: .5;
+    }
+    .fixed-top {
+        position: fixed;
+    }
+    .nav-link {
+        font-size: 1.6rem;
+    }
+    .div-banner-central {
+        padding-top: 21rem;
+    }
+    .titulo22anos {
+        font-size: 5rem;
+    }
+    .paragrafo-banner-central {
+        font-size: 1.7rem;
+    }
+}
+
+/* Subseção destaque */
+
+/* Parágrafo amarelo */
+@media (min-width: 62rem) {
+    .paragrafo-amarelo-destaque0 {
+        margin-top: -1.3rem;
+    }
+    .paragrafo-amarelo-obras {
+        margin-top: -1.3rem;
+    }
+    .paragrafo-amarelo-obras0 {
+        margin-top: -1.3rem;
+    }
+}
+
+@media (min-width: 62rem) {
+    .section-container-destatques {
+        padding-bottom: 5rem;
+    }
+    .secao-destaques {
+        display: flex;
+        flex-wrap: nowrap;
+        margin-right: 8rem;
+    }
+    .div-destaques,
+    .img-titulo-destatques {
+        width: 50%;
+    }
+    .titles-homepage {
+        font-size: 3rem;
+    }
+    .title-contato {
+        font-size: 3rem;
+    }
+    .img-destaques {
+        width: 95%;
+        margin-left: 5rem;
+    }
+    .div-destaques2 {
+        width: 45%;
+        padding-top: 1.5rem;
+        margin-left: 4rem;
+    }
+    .div-destaques2 img {
+        img-fluid {
+            width: 90%;
+        }
+    }
+}
+
+/* Subseção Área de Atuação */
+@media (min-width: 62rem) {
+    .section-container-atuacao {
+        padding-bottom: 5rem;
+    }
+    .row-atuacao {
+        margin-left: 5rem;
+        margin-right: 10rem;
+    }
+    .div-atuacao {
+        margin-left: 5rem;
+    }
+    .div-area-atuacao {
+        margin-left: 1.25rem;
+    }
+    .titulo-pagina-atuacao {
+        font-size: 3rem;
+        font-weight: 600;
+        padding-bottom: 2rem;
+    }
+    .h6-expertise {
+        font-size: 2rem;
+        margin-left: 5.5rem;
+    }
+    .owl-nav {
+        margin-left: 83rem;
+    }
+}
+
+/* Subseção Obras */
+@media (min-width: 62rem) {
+    .col-6 {
+        width: 45%;
+    }
+    .div-obras {
+        padding-top: 9rem;
+        margin-top: 4rem;
+    }
+    
+    .div-logoempresa-obras {
+        text-align: end;
+        margin-top: -2rem;        
+    }
+    .img-tit-obras-realizadas {
+        width: 95%;
+    }
+    .logo-empresa {
+        width: 35%;
+        margin-left: 28rem;
+        padding-top: 0;
+    }
+    .botao-ver-mais {
+        padding-top: .8rem;
+        padding-bottom: .8rem;
+    }
+}
+
+/* Subseção Clientes */
+@media (min-width: 62rem) {
+    .div-clientes {
+        margin-left: 5rem;
+    }
+    .div-texto-clientes {
+        margin-left: 24rem;
+    }
+    .div-titulo-clientes {
+        margin-left: 0;
+        text-align: left;
+    }
+    .title-clientes {
+        margin-left: 0rem;
+    }
+    .paragrafo-amarelo-clientes {
+        margin-top: 1.5rem;
+        display: block;
+    }
+    
+}
+
+/* Subseção Contatos */
+
+@media (min-width: 62rem) {
+    .row-contato {
+        padding-top: 7%;
+    }
+    .div-text-contact {
+        padding-bottom: 15rem;
+        padding-right: 2rem;
+    }
+    .div-form-contato {
+        padding-left: 2rem;
+    }
+    .paragrafo-contato {
+        padding-top: 5rem;
+        font-size: 1.8rem;
+    }
+    .label-form-contact {
+        font-size: 1.8rem;
+    }
+    .text-redes-sociais {
+        color: white;
+        font-size: 2rem;
+    }
+}
+
+/* Subseção localizacao */
+/* ---------------------------------------------------- */
+@media (max-width: 62rem) {
+    .div-iframe-home {
+        margin-top: 2rem;
+    }
+    .div-iframe-endereco {
+        margin-left: 5rem;
+    }
+    .div-texto-endereco {
+        margin-left: 5.5rem;
+    }
+}
+
+/* Seção HEADER 75rem */
+
+@media (min-width: 75rem) {
+    .div-banner-central {
+        padding-top: 30rem;
+    }
+    .nav-link {
+        font-size: 1.8rem;
+    }
+    .div-logoempresa-obras {
+        text-align: end;
+        margin-left: 10rem;
+        margin-top: -2rem;
+    }
+    
+}
+
+/* Seção Áreas de Atuação */
+@media (min-width: 75rem) {
+    .section-container-destatques,
+    .section-container-atuacao,
+    .section-container-obras {
+        padding-bottom: 7rem;
+    }
+    .row-atuacao {
+        width: 100%;
+    }
+    .titulo-pagina-atuacao {
+        font-size: 3.5rem;
+        font-weight: 600;
+        padding-bottom: 2rem;
+    }
+    .titles-homepage,
+    .title-contato {
+        font-size: 3.5rem;
+    }
+    .div-texto-obras,
+    .div-texto-atuacao {
+        margin-left: 3rem;
+    }
+    .div-texto-obras-home {
+        margin-left: 2rem;
+    }
+    .h6-expertise {
+        padding-bottom: 2rem;
+        margin-left: 5.3rem;
+    }
+    .owl-nav {
+        margin-left: 71.5rem;
+        row-gap: 2rem;
+    }
+    .div-texto-endereco {
+        margin-left: 15rem;
+    }
+    .div-texto-clientes {
+        margin-left: 29rem;
+    }
+}
+
+/* PÁGINA INSTITUCIONAL */
+.banner-institucional {
+    height: 100vh;
+    width: 100vw;
+    margin-left: 0;
+    background-image: url('/static/img/institucional/bannerInstitucional.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+.tituloInstitucional {
+    color: #F9F9F9;
+    padding-top: 32rem;
+    text-align: center;
+    font-size: 6rem;
+    font-weight: 700;
+}
+
+.container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.secao-22anos {
+    /* margin-bottom: 7rem; */
+    border-bottom: #D9D9D9 1px solid;
+    padding-bottom: 9rem;
+    
+}
+
+.div-institucional-excelencia {
+    margin-top: 8rem;
+}
+
+.texto-logo-institucional {
+    width: 100%;
+    height: 29.06rem;
+    margin-right: 3rem;
+    font-size: 1.3rem;
+}
+
+
+.texto-logo-institucional h2 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-left: 1.5rem;
+}
+
+.texto-logo-institucional p {
+    font-size: 16px;
+    font-weight: 500;
+    margin-left: 1.5rem;
+    
+}
+
+.logo-institucional {
+    border-radius: 10px;
+    justify-items: center;
+    align-content: center;
+    
+}
+
+.img-logo-institucional {
+    justify-content: center;
+    align-items: center;
+    margin-top: -2rem;
+}
+
+.img-logo-institucional img {
+    width: 50%;
+    margin-left: 6.5rem;
+}
+
+.botao-entrar-contato {
+    text-decoration: none;
+    background-color: #ED6D0E;
+    padding: 1rem;
+    border: none;
+    margin-left: 1.5rem;
+}
+
+.botao-entrar-contato a {
+    color: #F9F9F9;
+    text-decoration: none;
+    
+}
+
+.botao-entrar-contato-obra {
+    text-decoration: none;
+    background-color: #ED6D0E;
+    padding: 1rem;
+    border: none;
+    margin-left: 1.5rem;
+}
+
+.botao-entrar-contato-obra a {
+    color: #F9F9F9;
+    text-decoration: none;
+    
+}
+
+.botao-entrar-contato-obra1 {
+    text-decoration: none;
+    background-color: #ED6D0E;
+    padding: 1rem;
+    border: none;
+    margin-left: 1.5rem;
+}
+
+.botao-entrar-contato-obra1 a {
+    color: #F9F9F9;
+    text-decoration: none;
+    
+}
+
+.paragrafo-amarelo {
+    margin-top: 1.3rem;
+    width: 2.8rem;
+    height: .4rem;
+    background-color: #ED6D0E;
+    text-align: end;
+    
+}
+
+@media (max-width: 30rem) {
+    .paragrafo-amarelo {
+        display: none;
+    }
+
+}
+
+/* Seção Missão, Visão e Valores */
+.geral-institucional {
+    margin-left: 10rem;
+    margin-right: 10rem;
+}
+.container-institucional {
+    margin-left: 11rem;
+}
+
+.container-valores {
+    padding-top: 5rem;
+    /* padding-right: 0; */
+    
+}
+
+
+.col6-institucional2 {
+    margin-left: 0rem;
+    padding-right: 5rem;
+}
+
+#valores-empresa {
+    justify-content: center;
+    gap: 2rem;
+}
+
+.div-valores {
+    border: #ED6D0E, 1px, solid;
+    border-radius: 10px;
+    width: 29%;
+    height: 60%;
+    padding-bottom: .5rem;
+    align-items: center;
+    align-content: center;
+    padding-top: 1rem;
+}
+
+.div-valores1 {
+    padding-top: 2rem;
+    /* width: 30%; */
+    /* height: 60%; */
+    padding-bottom: 3rem;
+}
+
+.div-valores2 {
+    padding-top: 2rem;
+    /* width: 30%; */
+    /* height: 60%; */
+    padding-bottom: 5.5rem;
+}
+
+
+.img-valores {
+    /* margin-left: 3.5rem; */
+    /* width: 175px;
+    height: 175px; */
+    text-align: center;
+}
+
+.img-valores1 {
+    /* margin-left: 5.3rem; */
+    /* width: 140px;
+    height: 140px; */
+    text-align: center;
+}
+
+.titulo-valores {
+    font-size: 2.5rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+.paragrafo-valores {
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
+#colllg4 {
+    flex: 1 0 auto;
+}
+
+
+#missao-visao-valores {
+    gap: 2rem;
+    text-align: center;
+    
+}
+
+/* PÁGINA ÁREA DE ATUAÇÃO */
+
+@media (min-width: 30rem) {
+    .row-area-atuacao {
+        margin-left: 3rem;
+        margin-right: 3rem;
+    }
+    .img-areas-atuacao img {
+        width: 100%;
+    }
+}
+
+@media (min-width: 62rem) {
+    .row-area-atuacao {
+        gap: 2rem;
+    }
+    .img-areas-atuacao {
+        width: 45%;
+    }
+}
+
+
+/* PÁGINA OBRAS */
+
+.section-pagina-obras {
+    border-bottom: #D9D9D9 1px solid;
+    padding-bottom: 6rem;
+    margin-top: 5rem;
+}
+
+.secao-obras {
+    padding-top: 2rem;
+}
+
+
+
+.div-obras-realizadas {
+    width: 100%;
+}
+
+.div-obras-realizadas2 {
+    width: 100%;
+}
+
+.div-texto-pagina-obras {
+    margin-top: 5rem;
+   
+}
+
+.div-texto-pagina-obras2 {
+    margin-top: 0rem;
+   
+}
+
+.title-obras {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.subtitle-obras {
+    font-size: 16px;
+    color: #282828;
+    font-weight: 500;
+    padding-bottom: 1rem;
+}
+
+.paragrafo-amarelo-obras {
+    width: 2.8rem;
+    height: .4rem;
+    background-color: #ED6D0E;
+    text-align: end;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+    margin-right: 1rem;
+}
+
+.paragrafo-amarelo-obras0 {
+    width: 2.8rem;
+    height: .4rem;
+    background-color: #ED6D0E;
+    text-align: end;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+    margin-right: .7rem;
+}
+
+.paragrafo-amarelo-clientes {
+    width: 2.8rem;
+    height: .4rem;
+    background-color: #ED6D0E;
+    text-align: end;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+    margin-right: .7rem;
+}
+
+.secao-obras-em-adamento {
+    padding-top: 6;
+}
+
+@media (max-width: 30rem) {
+    .title-obras {
+        font-size: 2rem;
+    }
+}
+
+@media (min-width: 48rem) {
+    .div-texto-pagina-obras {
+        margin-top: 7rem;
+    }
+    .title-obras {
+        font-size: 2.5rem;
+    }
+    .subtitle-obras {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 62rem) {
+    .div-texto-pagina-obras {
+        margin-top: 7rem;
+    }
+    .title-obras {
+        font-size: 3rem;
+    }
+    .subtitle-obras {
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width: 75rem) {
+    .div-texto-pagina-obras {
+        margin-top: 7rem;
+    }
+    .title-obras {
+        font-size: 3.5rem;
+    }
+    .subtitle-obras {
+        font-size: 2rem;
+    }
+}
+
+
+/* PÁGINA INSTITUCIONAL */
+@media (max-width: 30rem) {
+    .container-valores {
+        padding-left: 2rem;
+        padding-right: 2rem;
+        padding-bottom: 2rem;
+    }
+    .banner-institucional {
+        height: 90vh;
+    }
+    .tituloInstitucional {
+        font-size: 3rem;
+    }
+    .geral-institucional {
+        margin-left: 0rem;
+        margin-right: 0rem;
+    }
+    .secao-22anos {
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+    .container-institucional {
+        margin-right: 1rem;
+        margin-left: 1rem;
+    }
+    .texto-logo-institucional h2 {
+        font-size: 1.5rem;
+    }
+    #valores-empresa {
+        justify-content: center;
+        gap: 2rem;
+    }
+    .img-logo-institucional img {
+        margin-left: 6.5rem;
+    }
+    .col6-institucional {
+        margin-left: 0rem;
+        padding-right: 3rem;
+    }
+    .col6-institucional2 {
+        margin-left: 1rem;
+        margin-top: 6rem;
+        padding-right: 2rem;
+    }
+    .div-valores{
+        width: 85% !important; 
+        text-align: center;
+        
+    }
+    .div-valores1 {
+        width: 85% !important;
+        text-align: center;
+    }
+    .div-valores2 {
+        width: 85% !important;
+        text-align: center;
+    }
+    .container-missaovalores {
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+    .imgComTitle img {
+    width: 85%;
+    }
+    #missao-visao-valores {
+        text-align: center;
+        gap: 1rem;
+    }
+}
+
+@media (min-width: 36rem) {
+    .geral-institucional {
+        margin-left: 1rem;
+        margin-right: 3rem;
+    }
+    .paragrafo-amarelo {
+        display: none;
+    }
+    .tituloInstitucional {
+        font-size: 3.5rem;
+    }
+    .container-institucional {
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+    .div-institucional-excelencia {
+        margin-right: 4rem;
+    }
+    .col6-institucional {
+        padding-right: 6rem;
+    }
+    .col6-institucional2 {
+        margin-left: 1rem;
+        padding-right: 5rem;
+    }
+    .texto-logo-institucional h2 {
+        margin-right: 0;
+        font-size: 1.8rem;
+    }
+    .container-valores {
+        padding-right: 2rem !important;
+        padding-left: 2rem;
+    }
+    .imgComTitle img {
+        width: 85%;
+        }
+    .div-valores{
+        width: 85% !important; 
+        text-align: center;       
+    }
+    .div-valores1 {
+        width: 85% !important; 
+        text-align: center;   
+    }
+    .div-valores2 {
+        width: 85% !important; 
+        text-align: center;   
+    }
+}
+
+/* Página Obras */
+
+@media (min-width: 36rem) {
+    .botao-entrar-contato-obra1 {
+        margin-left: .5rem;
+    }
+}
+
+@media (min-width: 48rem) {
+    .botao-entrar-contato-obra1 {
+        margin-left: 1rem;
+    }
+}
+
+@media (min-width: 62rem) {
+    .botao-entrar-contato-obra1 {
+        margin-left: 1.5rem;
+    }
+}
+
+
+/* Página Institucional Min-width 40rem */
+@media (min-width: 40rem) {
+    .tituloInstitucional {
+        font-size: 4.5rem;
+    }
+    
+}
+
+@media (min-width: 48rem) {
+    .tituloInstitucional {
+        font-size: 5rem;
+    }
+    .texto-logo-institucional h2 {
+        margin-right: 3rem;
+        font-size: 2.8rem;
+    }
+    .img-logo-institucional img {
+        width: 80%;
+        margin-left: 3rem;
+    }
+    .div-institucional-excelencia {
+        margin-right: 0rem;
+    }
+    .col6-institucional {
+        padding-right: 3rem;
+    }
+    .col6-institucional2 {
+        margin-left: 0rem;
+    }
+}
+
+@media (max-width: 48rem) {
+    .paragrafo-amarelo {
+        display: none;
+    
+    }
+}
+
+@media (min-width: 62rem) {
+    .tituloInstitucional {
+        font-size: 6rem;
+    }
+    .texto-logo-institucional h2 {
+        margin-right: 3rem;
+        font-size: 3rem;
+    }
+    .geral-institucional {
+        margin-left: 5rem;
+        margin-right: 5rem;
+    }
+    .container-institucional {
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+    .paragrafo-amarelo {
+        display: block;
+    
+    }
+    .col6-institucional2 {
+        padding-right: 2rem;
+    }
+    .div-valores,
+    .div-valores1,
+    .div-valores2 {
+        width: 31% !important;
+        text-align: center;
+    }
+    #missao-visao-valores {
+        gap: 0;
+        text-align: center;
+    }
+    .div-valores0 {
+        padding-bottom: 0.5rem;
+    }
+    .div-valores1 {
+        padding-bottom: 0rem;
+    }
+    .div-valores2 {
+        padding-bottom: 2.1rem;
+    }
+}
+
+@media (min-width: 75rem) {
+    .texto-logo-institucional {
+        margin-right: 0rem;
+    }
+    .col6-institucional2 {
+        padding-right: 0rem;
+    }
+    .texto-logo-institucional h2 {
+        font-size: 3rem;
+    }
+    .container-valores {
+        padding-left: 0rem;
+        padding-right: 0rem;
+    }
+    .imgComTitle img {
+        width: 97%;
+    }
+    .imgComTitle2 {
+        margin-left: -1rem;
+    }
+    .imgComTitle3 {
+        margin-left: -.5rem;
+    }
+}
 
