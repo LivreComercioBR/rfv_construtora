@@ -20,7 +20,7 @@ if DEBUG == True:
 
 else:
 
-    ALLOWED_HOSTS = ["127.0.0.1:8000", "127.0.0.1" "localhost", "construtorarfv.com.livrecomerciobrasil.com",
+    ALLOWED_HOSTS = ["127.0.0.1:8000", "127.0.0.1", "localhost", "construtorarfv.com.livrecomerciobrasil.com",
                      "www.construtorarfv.com.livrecomerciobrasil.com", "www.construtorarfv.com.br"]
 
 
@@ -132,7 +132,7 @@ DEFAULT_FROM_EMAIL = "ronaldo@rfvconstrutora.com.livrecomerciobrasil.com"
 EMAIL_HOST = "smtp.a2hosting.com"
 EMAIL_PORT = 465
 EMAIL_HOST_USER = "ronaldo@rfvconstrutora.com.livrecomerciobrasil.com"
-EMAIL_HOST_PASSWORD = "Rv6041802009*"
+EMAIL_HOST_PASSWORD = " "
 EMAIL_USE_TLS = True
 
 

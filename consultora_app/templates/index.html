@@ -142,32 +142,15 @@ Homepage - Construtora RFV
     </div>
     <div class="row row-obras-home d-flex justify-content-center align-items-center">
 
-
+        {% for obra in obras %}
         <div class="col-6 mb-0 flex-row text-center div-obras-home">
-            <a href="./clientes.html"><img class="img-obras-home" src="{% static 'img/obras/obra1.png' %}" alt=""
+
+            <a href="{% url 'obra' obra.id %}"><img class="img-obras-home" src="{{obra.imagens.all.0}}" alt=""
                     loading="lazy"></a>
-        </div>
-        <div class="col-6 mb-0 flex-row text-center div-obras-home">
-            <a href="./clientes.html"><img src="{% static 'img/obras/obra2.png' %}" alt=""
-                    style="width: 100%; height: 90%;" loading="lazy"></a>
 
         </div>
-        <div class="col-6 mb-0 flex-row text-center div-obras-home">
-            <a href="./clientes.html"><img src="{% static 'img/obras/obra3.png' %}" alt=""
-                    style="width: 100%; height: 90%;" loading="lazy"></a>
-        </div>
-        <div class="col-6 mb-0 flex-row text-center div-obras-home">
-            <a href="./clientes.html"><img src="{% static 'img/obras/obra4.png' %}" alt=""
-                    style="width: 100%; height: 90%;" loading="lazy"></a>
-        </div>
-        <div class="col-6 mb-0 flex-row text-center div-obras-home">
-            <a href="./clientes.html"><img src="{% static 'img/obras/obra5.png' %}" alt=""
-                    style="width: 100%; height: 90%;" loading="lazy"></a>
-        </div>
-        <div class="col-6 mb-0 flex-row text-center div-obras-home">
-            <a href="./clientes.html"><img src="{% static 'img/obras/obra6.png' %}" alt=""
-                    style="width: 100%; height: 90%;" loading="lazy"></a>
-        </div>
+        {% endfor %}
+
         <div class="col-12 d-flex justify-content-around">
             <div></div>
             <div>

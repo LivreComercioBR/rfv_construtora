@@ -12,7 +12,7 @@ def homepage(request):
     # video = Video.objects.get(id=1)
     # banner = BannerCliente.objects.get(id=1)
     areas_atuacao = AreaAtuacao.objects.all()
-    obras = Obra.objects.all()
+    obras = Obra.objects.all()[0:6]
 
     if request.method == "GET":
 
@@ -28,8 +28,8 @@ def homepage(request):
         server_smtp = 'mail.livrecomerciobrasil.com'
         port = 465
         from_addr = 'administrador@livrecomerciobrasil.com'
-        to_addrs = 'ronaldocorreiadesouza@gmail.com'
-        password = 'Rv604180*'
+        to_addrs = 'comercial@construtorarfv.com.br'
+        password = ' '
 
         # Configurações do email
         body = f"""
